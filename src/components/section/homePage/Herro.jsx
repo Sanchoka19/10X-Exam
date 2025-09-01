@@ -13,7 +13,6 @@ const Herro = () => {
               grid-cols-1             
               md:grid-cols-2          
               lg:grid-cols-[repeat(3,_minmax(150px,_1fr))] 
-              bg-white
             "
         >
             {/* Left big image */}

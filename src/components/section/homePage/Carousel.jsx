@@ -29,11 +29,11 @@ const Carousel = () => {
 
 
   return (
-    <div className="flex px-[20px] py-[120px] flex-col lg:flex-row">
+    <div className="flex px-[20px] py-[120px] flex-col lg:flex-row bg-white">
 
       <div className="lg:w-3/7 w-full flex flex-col items-center justify-end py-[100px] gap-[60px]">
         <div className="flex flex-col items-center justify-center h-full w-full">
-          <div className="flex flex-col gap-[32px] w-full items-start items-center">
+          <div className="flex flex-col gap-[32px] items-start">
             <div className="flex flex-col gap-[8px]">
               <span className="text-[60px] font-bold">Deals Of The Month</span>
               <p className="max-w-[436px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>

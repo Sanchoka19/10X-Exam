@@ -56,7 +56,7 @@ const Arrivals = () => {
 
     return (
 
-        <div className="flex flex-col justify-center w-screen px-[10px] py-[120px] items-center gap-[60px] bg-white">
+        <div className="flex flex-col justify-center w-screen px-[10px] py-[120px] items-center gap-[60px] bg-[#f9f9f9]">
             <div className="flex flex-col gap-[16px]  max-w-[614px] items-center">
                 <h1 className="font-bold">New Arrivals</h1>
                 <p className="text-center text-[#8A8A8A] text-lg w-full">Our new arrivals have just landed, bringing you an exclusive selection of fresh styles, bold designs, and carefully crafted pieces. </p>

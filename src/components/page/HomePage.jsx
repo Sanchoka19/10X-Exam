@@ -4,7 +4,8 @@ import Logo from "../section/homePage/Logo";
 import Carousel from "../section/homePage/Carousel";
 import Arrivals from "../section/homePage/Arrivals";
 import Feature from "../section/homePage/Features";
-
+import Footer from "../layout/MainFooter"
+import Subscribe from "../section/homePage/Subscribe";
 
 const HomePage = () => {
     return (
@@ -15,6 +16,8 @@ const HomePage = () => {
             <Carousel />
             <Arrivals />
             <Feature />
+            <Subscribe />
+            <Footer />
         </div>
     )
 }
