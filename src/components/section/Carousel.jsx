@@ -29,7 +29,7 @@ const Carousel = () => {
 
 
   return (
-    <div className="flex p-[20px] flex-col lg:flex-row">
+    <div className="flex px-[20px] py-[120px] flex-col lg:flex-row">
 
       <div className="lg:w-3/7 w-full flex flex-col items-center justify-end py-[100px] gap-[60px]">
         <div className="flex flex-col items-center justify-center h-full w-full">
@@ -71,7 +71,7 @@ const Carousel = () => {
             </div>
           ))}
         </div>
-        <div className="flex self-end gap-[24px] absolute bottom-4 left-1/2 -translate-x-1/2">
+        <div className="flex self-end gap-[24px] absolute bottom-4 lg:left-1/2 lg:(-translate-x-1/2) right-4">
           <img onClick={handlePrevBtn} src={lefArrow} alt="left-arrow" className="p-[15px] bg-white hover:bg-lime-100 transition duration-150 ease-linear rounded-[100px] shadow-[0_0_50px_rgba(0,0,0,0.3)] active:bg-white" />
           <img onClick={handleNextBtn} src={rightArrow} alt="right-arrow" className="p-[15px] bg-white hover:bg-lime-100 transition duration-150 ease-linear rounded-[100px] shadow-[0_0_50px_rgba(0,0,0,0.3)] active:bg-white" />
         </div>

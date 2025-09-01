@@ -6,7 +6,7 @@ import denimLogo from "../../assets/images/denim.png"
 
 const Logo = () => {
     return (
-        <div className="flex px-[20px] py-[40px] gap-[40px] w-full flex flex-wrap items-center justify-center">
+        <div className="flex px-[20px] py-[100px] gap-[40px] w-full flex flex-wrap items-center justify-center">
             <img src={chanelLogo} alt="chanelLogo" className="h-[33px]" />
             <img src={louisVuitonLogo} alt="louisVuitonLogo" />
             <img src={pradaLogo} alt="pradaLogo" />

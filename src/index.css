@@ -29,3 +29,7 @@ h1 {
 button, input {
   cursor: pointer;
 }
+
+body {
+  background-color: #f9f9f9;
+}

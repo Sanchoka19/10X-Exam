@@ -2,7 +2,7 @@ import MainHeader from "../layout/MainHeader";
 import Herro from "../section/Herro";
 import Logo from "../section/Logo";
 import Carousel from "../section/Carousel";
-
+import Arrivals from "../section/Arrivals";
 
 const HomePage = () => {
     return (
@@ -11,6 +11,7 @@ const HomePage = () => {
             <Herro />
             <Logo />
             <Carousel />
+            <Arrivals />
         </div>
     )
 }
