@@ -1,8 +1,10 @@
 import MainHeader from "../layout/MainHeader";
-import Herro from "../section/Herro";
-import Logo from "../section/Logo";
-import Carousel from "../section/Carousel";
-import Arrivals from "../section/Arrivals";
+import Herro from "../section/homePage/Herro"
+import Logo from "../section/homePage/Logo";
+import Carousel from "../section/homePage/Carousel";
+import Arrivals from "../section/homePage/Arrivals";
+import Feature from "../section/homePage/Features";
+
 
 const HomePage = () => {
     return (
@@ -12,6 +14,7 @@ const HomePage = () => {
             <Logo />
             <Carousel />
             <Arrivals />
+            <Feature />
         </div>
     )
 }

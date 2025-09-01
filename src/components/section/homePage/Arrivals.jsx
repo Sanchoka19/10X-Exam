@@ -1,21 +1,21 @@
-import Card from "../common/Card";
-import Button from "../common/Button";
+import Card from "../../common/Card";
+import Button from "../../common/Button";
 
 
-import cardGirl1 from "../../assets/images/cardGirl-1.jpg"
-import cardGirl2 from "../../assets/images/cardGirl-2.jpg"
-import cardGirl3 from "../../assets/images/CardGirl-3.jpg"
+import cardGirl1 from "../../../assets/images/cardGirl-1.jpg"
+import cardGirl2 from "../../../assets/images/cardGirl-2.jpg"
+import cardGirl3 from "../../../assets/images/CardGirl-3.jpg"
 
-import cardMan1 from "../../assets/images/man-fashion-1.jpg"
-import cardMan2 from "../../assets/images/man-fashion-2.jpg"
+import cardMan1 from "../../../assets/images/man-fashion-1.jpg"
+import cardMan2 from "../../../assets/images/man-fashion-2.jpg"
 
-import womenAcc1 from "../../assets/images/woman-acc1.jpg"
-import womenAcc2 from "../../assets/images/woman-acc2.jpg"
-import womenAcc3 from "../../assets/images/woman-acc-3.jpg"
+import womenAcc1 from "../../../assets/images/woman-acc1.jpg"
+import womenAcc2 from "../../../assets/images/woman-acc2.jpg"
+import womenAcc3 from "../../../assets/images/woman-acc-3.jpg"
 
-import manAcc1 from "../../assets/images/man-acc.jpg"
-import manAcc2 from "../../assets/images/manAcc.jpg"
-import manAcc3 from "../../assets/images/rolex.jpg"
+import manAcc1 from "../../../assets/images/man-acc.jpg"
+import manAcc2 from "../../../assets/images/manAcc.jpg"
+import manAcc3 from "../../../assets/images/rolex.jpg"
 
 
 import { useState } from "react";
@@ -56,7 +56,7 @@ const Arrivals = () => {
 
     return (
 
-        <div className="flex flex-col justify-center w-screen px-[10px] py-[120px] items-center gap-[60px]">
+        <div className="flex flex-col justify-center w-screen px-[10px] py-[120px] items-center gap-[60px] bg-white">
             <div className="flex flex-col gap-[16px]  max-w-[614px] items-center">
                 <h1 className="font-bold">New Arrivals</h1>
                 <p className="text-center text-[#8A8A8A] text-lg w-full">Our new arrivals have just landed, bringing you an exclusive selection of fresh styles, bold designs, and carefully crafted pieces. </p>

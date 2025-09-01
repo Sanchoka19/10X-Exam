@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import carousel1 from "../../assets/images/Coursel-girl-1.jpg";
-import carousel2 from "../../assets/images/Coursel-girl-2.jpg";
-import carousel3 from "../../assets/images/Coursel-girl-3.jpg";
+import carousel1 from "../../../assets/images/Coursel-girl-1.jpg";
+import carousel2 from "../../../assets/images/Coursel-girl-2.jpg";
+import carousel3 from "../../../assets/images/Coursel-girl-3.jpg";
 
-import rightArrow from "../../assets/icons/right-arrow.svg";
-import lefArrow from "../../assets/icons/left-arrow.svg";
-import Button from "../common/Button";
+import rightArrow from "../../../assets/icons/right-arrow.svg";
+import lefArrow from "../../../assets/icons/left-arrow.svg";
+import Button from "../../common/Button";
 
 
 const Carousel = () => {
@@ -57,13 +57,13 @@ const Carousel = () => {
               key={item.id}
               className="w-full flex-shrink-0"
             >
-              <div className="relative w-full h-[700px]">
+              <div className="relative w-full h-[700px] ">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-2xl"
                 />
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-2 rounded shadow-md shadow-black/40 absolute">
+                <div className="absolute bottom-4 left-4 bg-white px-6 py-4 rounded-2xl shadow-md shadow-black/40 absolute">
                   <p className="text-[32px] font-medium">{item.title}</p>
                   <span className="text-[24px] font-bold">{item.discount}</span>
                 </div>

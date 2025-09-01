@@ -1,18 +1,19 @@
-import Button from "../common/Button";
+import Button from "../../common/Button";
 
-import blackGuy from "../../assets/images/BlackHerroGuy.png"
-import girlFromTop from "../../assets/images/GirlForHerroUp.png"
-import curlyGuy from "../../assets/images/CurlyGuyForHero.png"
+import blackGuy from "../../../assets/images/BlackHerroGuy.png"
+import girlFromTop from "../../../assets/images/GirlForHerroUp.png"
+import curlyGuy from "../../../assets/images/CurlyGuyForHero.png"
 
 const Herro = () => {
     return (
         <div
             className="
-              w-full py-[30px] px-[20px]
+              w-full  px-[20px]
               grid gap-4 h-auto
               grid-cols-1             
               md:grid-cols-2          
               lg:grid-cols-[repeat(3,_minmax(150px,_1fr))] 
+              bg-white
             "
         >
             {/* Left big image */}
