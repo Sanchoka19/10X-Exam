@@ -5,12 +5,14 @@ import ForgetPassword from "./components/page/ForgerPasswordPage"
 import Confirmation from "./components/page/Confirmation"
 import Newpass from "./components/page/Newpass"
 import HomePage from "./components/page/HomePage"
+import ShopPage from "./components/page/ShopPage"
 
 
 function App() {
   return (
     <>
-      <HomePage />
+      <ShopPage />
+      {/* <HomePage /> */}
       {/* <RegistrationPage /> */}
       {/* <LoginPage /> */}
       {/* <ForgetPassword /> */}

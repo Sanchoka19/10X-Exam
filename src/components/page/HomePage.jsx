@@ -4,8 +4,8 @@ import Logo from "../section/homePage/Logo";
 import Carousel from "../section/homePage/Carousel";
 import Arrivals from "../section/homePage/Arrivals";
 import Feature from "../section/homePage/Features";
-import Footer from "../layout/MainFooter"
 import Subscribe from "../section/homePage/Subscribe";
+import Footer from "../layout/MainFooter"
 
 const HomePage = () => {
     return (
