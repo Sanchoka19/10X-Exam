@@ -1,102 +1,84 @@
 import { useState } from "react";
+
 import carousel1 from "../../assets/images/Coursel-girl-1.jpg";
 import carousel2 from "../../assets/images/Coursel-girl-2.jpg";
 import carousel3 from "../../assets/images/Coursel-girl-3.jpg";
 
-const CustomCarousel = () => {
+import rightArrow from "../../assets/icons/right-arrow.svg";
+import lefArrow from "../../assets/icons/left-arrow.svg";
+import Button from "../common/Button";
+
+
+const Carousel = () => {
+
   const products = [
-    { id: 1, title: "Spring Sale", discount: "30% OFF", img: carousel1 },
-    { id: 2, title: "Summer Dress", discount: "20% OFF", img: carousel2 },
-    { id: 3, title: "Casual Wear", discount: "15% OFF", img: carousel3 },
-  ];
+    { id: 1, title: "Spring Sale", discount: "30%", img: carousel1 },
+    { id: 2, title: "Spring Sale", discount: "15%", img: carousel2 },
+    { id: 3, title: "Spring Sale", discount: "45%", img: carousel3 }
+  ]
 
-  const [current, setCurrent] = useState(0);
+  const [curent, setCurent] = useState(0);
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === products.length - 1 ? 0 : prev + 1));
-  };
+  const handleNextBtn = () => {
+    setCurent((prev) => prev === products.length - 1 ? 0 : prev + 1);
+  }
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? products.length - 1 : prev - 1));
-  };
+  const handlePrevBtn = () => {
+    setCurent((prev) => prev === 0 ? products.length - 1 : prev - 1);
+  }
+
 
   return (
-    <div className="flex justify-center items-center py-10 px-6 gap-10">
-      {/* LEFT SIDE */}
-      <div className="w-1/2 flex flex-col gap-10">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-4xl font-bold">Deals Of The Month</h2>
-          <p className="w-[436px] text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
-            duis ultrices sollicitudin aliquam sem.
-          </p>
-          <button className="bg-black text-white px-10 py-3 rounded-lg shadow-md shadow-black/50">
-            Buy Now
-          </button>
-        </div>
+    <div className="flex p-[20px] flex-col lg:flex-row">
 
-        {/* Countdown */}
-        <div>
-          <p className="text-2xl font-medium mb-4">Hurry, Before It’s Too Late!</p>
-          <div className="flex gap-6">
-            {[
-              { time: "02", label: "Days" },
-              { time: "06", label: "Hr" },
-              { time: "05", label: "Mins" },
-              { time: "30", label: "Sec" },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center gap-2">
-                <span className="px-4 py-2 text-3xl bg-white border border-dashed border-black rounded-md shadow-md shadow-black/40">
-                  {item.time}
-                </span>
-                <span className="text-gray-600">{item.label}</span>
-              </div>
-            ))}
+      <div className="lg:w-3/7 w-full flex flex-col items-center justify-end py-[100px] gap-[60px]">
+        <div className="flex flex-col items-center justify-center h-full w-full">
+          <div className="flex flex-col gap-[32px] w-full items-start items-center">
+            <div className="flex flex-col gap-[8px]">
+              <span className="text-[60px] font-bold">Deals Of The Month</span>
+              <p className="max-w-[436px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>
+            </div>
+            <Button colorClass="bg-black max-w-[207px] w-full text-white" value="Buy Now" />
+            <div className="flex flex-col gap-[8px]">
+              <span className="text-[40px] font-medium">Hurry, Before It’s Too Late!</span>
+            </div>
           </div>
-        </div>
-
-        {/* Custom Buttons */}
-        <div className="flex gap-4 mt-6">
-          <button
-            onClick={prevSlide}
-            className="px-5 py-3 bg-black text-white rounded-full shadow-lg shadow-black/50"
-          >
-            ◀
-          </button>
-          <button
-            onClick={nextSlide}
-            className="px-5 py-3 bg-black text-white rounded-full shadow-lg shadow-black/50"
-          >
-            ▶
-          </button>
         </div>
       </div>
 
-      {/* RIGHT SIDE (Carousel) */}
-      <div className="w-1/2 overflow-hidden">
+
+      <div className="lg:w-4/7 w-full flex overflow-hidden relative">
         <div
           className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${current * 100}%)` }}
+          style={{ transform: `translateX(-${curent * 100}%)` }}
         >
           {products.map((item) => (
-            <div key={item.id} className="w-full flex-shrink-0 px-2">
-              <div className="relative rounded-xl overflow-hidden shadow-xl shadow-black/40">
+            <div
+              key={item.id}
+              className="w-full flex-shrink-0"
+            >
+              <div className="relative w-full h-[700px]">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-[500px] object-fit"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-4 left-4 bg-white px-3 py-2 rounded shadow-md shadow-black/40">
-                  <p className="text-sm font-medium">{item.title}</p>
-                  <span className="text-red-500 font-bold">{item.discount}</span>
+                <div className="absolute bottom-4 left-4 bg-white px-3 py-2 rounded shadow-md shadow-black/40 absolute">
+                  <p className="text-[32px] font-medium">{item.title}</p>
+                  <span className="text-[24px] font-bold">{item.discount}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <div className="flex self-end gap-[24px] absolute bottom-4 left-1/2 -translate-x-1/2">
+          <img onClick={handlePrevBtn} src={lefArrow} alt="left-arrow" className="p-[15px] bg-white hover:bg-lime-100 transition duration-150 ease-linear rounded-[100px] shadow-[0_0_50px_rgba(0,0,0,0.3)] active:bg-white" />
+          <img onClick={handleNextBtn} src={rightArrow} alt="right-arrow" className="p-[15px] bg-white hover:bg-lime-100 transition duration-150 ease-linear rounded-[100px] shadow-[0_0_50px_rgba(0,0,0,0.3)] active:bg-white" />
+        </div>
       </div>
-    </div>
-  );
-};
 
-export default CustomCarousel;
+    </div>
+  )
+}
+
+export default Carousel;
