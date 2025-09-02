@@ -86,6 +86,7 @@ const Filter = () => {
     return (
         <div className="flex gap-[24px] justify-center p-[80px]">
             <div className="lg:w-2/7 flex flex-col gap-[32px] hidden lg:flex">
+
                 <div className="flex flex-col gap-[24px] bg-white px-[40px] py-[50px] rounded-md w-fit sticky top-[40px]">
                     <div className="flex flex-col gap-[12px] w-fit">
                         <span className="text-2xl font-bold">Size</span>

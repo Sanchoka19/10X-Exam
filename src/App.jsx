@@ -11,8 +11,8 @@ import ShopPage from "./components/page/ShopPage"
 function App() {
   return (
     <>
-      <ShopPage />
-      {/* <HomePage /> */}
+      {/* <ShopPage /> */}
+      <HomePage />
       {/* <RegistrationPage /> */}
       {/* <LoginPage /> */}
       {/* <ForgetPassword /> */}

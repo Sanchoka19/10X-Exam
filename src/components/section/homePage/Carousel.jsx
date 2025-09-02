@@ -7,6 +7,7 @@ import carousel3 from "../../../assets/images/Coursel-girl-3.jpg";
 import rightArrow from "../../../assets/icons/right-arrow.svg";
 import lefArrow from "../../../assets/icons/left-arrow.svg";
 import Button from "../../common/Button";
+import DigitalCountdown from "../../common/DigitalCountdown";
 
 
 const Carousel = () => {
@@ -33,14 +34,15 @@ const Carousel = () => {
 
       <div className="lg:w-3/7 w-full flex flex-col items-center justify-end py-[100px] gap-[60px]">
         <div className="flex flex-col items-center justify-center h-full w-full">
-          <div className="flex flex-col gap-[32px] items-start">
+          <div className="flex flex-col gap-[40px] items-start">
             <div className="flex flex-col gap-[8px]">
               <span className="text-[60px] font-bold">Deals Of The Month</span>
-              <p className="max-w-[436px] w-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>
+              <p className="max-w-[436px] w-full">Discover unbeatable offers, limited-time discounts, and must-have products handpicked just for you this month!</p>
             </div>
             <Button colorClass="bg-black max-w-[207px] w-full text-white" value="Buy Now" />
-            <div className="flex flex-col gap-[8px]">
-              <span className="text-[40px] font-medium">Hurry, Before It’s Too Late!</span>
+            <div className="flex flex-col gap-[12px]">
+              <span className="text-4xl font-medium">Hurry, Before It’s Too Late!</span>
+              <DigitalCountdown initialSeconds={2 * 24 * 3600 + 6 * 3600 + 5 * 60 + 30} />
             </div>
           </div>
         </div>
