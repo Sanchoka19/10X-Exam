@@ -1,8 +1,5 @@
-import BurgerMenu from "../../assets/icons/burger.svg"
-import cart from "../../assets/icons/cart.svg"
-import profile from "../../assets/icons/profile.svg"
+import { User, ShoppingCart, Menu } from "lucide-react";
 
-import Button from "../common/Button";
 
 const SecondaryHeader = () => {
     return (
@@ -23,11 +20,11 @@ const SecondaryHeader = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="hidden lg:flex gap-[12px]">
-                <img src={cart} alt="cart" />
-                <img src={profile} alt="profile" />
+            <div className="hidden lg:flex gap-[24px]">
+                <User className="w-6 h-6 cursor-pointer" />
+                <ShoppingCart className="w-6 h-6 cursor-pointer" />
             </div>
-            <img src={BurgerMenu} alt="burgerMenu" className="lg:hidden cursor-pointer" />
+            <Menu className="lg:hidden cursor-pointer w-6 h-6" />
         </header >
     )
 }

@@ -1,7 +1,7 @@
 const ShopCard = (props) => {
     return (
-        <div className="flex flex-col gap-[12px] relative">
-            <img src={props.img} className="w-[302px]" />
+        <div className="flex flex-col gap-[12px] relative bg-white p-[20px] rounded-md">
+            <img src={props.img} className="w-[302px] rounded-md" />
             <div className="flex flex-col gap-[8px]">
                 <span className="text-xl">{props.title}</span>
                 <span className="text-3xl font-bold">{`$${props.price}`}</span>
