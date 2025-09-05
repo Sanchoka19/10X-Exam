@@ -6,9 +6,9 @@ import Button from "../common/Button";
 import SocialNetButton from "../common/SocialNetButton";
 
 // { Images }
-import MainImg from "../../assets/images/pexels-olly-919453.jpg";
-import googleIco from "../../assets/icons/GoogleIco.svg";
-import iphoneIco from "../../assets/icons/ApleIco.svg";
+import MainImg from "/assets/images/pexels-olly-919453.jpg";
+import googleIco from "/assets/icons/GoogleIco.svg";
+import iphoneIco from "/assets/icons/ApleIco.svg";
 
 
 const RegistrationPage = () => {

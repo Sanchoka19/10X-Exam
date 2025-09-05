@@ -3,11 +3,11 @@ import { Star, Eye, Plus, Minus } from "lucide-react";
 
 import Button from "../../common/Button";
 
-import girlImg from "../../../assets/images/details-girl.png";
-import img1 from "../../../assets/images/filter-girl-1.png";
-import img2 from "../../../assets/images/filter-girl-2.png";
-import img3 from "../../../assets/images/filter-girl-3.png";
-import img4 from "../../../assets/images/filter-girl-4.png";
+import girlImg from "/assets/images/details-girl.png";
+import img1 from "/assets/images/filter-girl-1.png";
+import img2 from "/assets/images/filter-girl-2.png";
+import img3 from "/assets/images/filter-girl-3.png";
+import img4 from "/assets/images/filter-girl-4.png";
 
 import MiniCart from "../MiniCart"
 import BurgerMenu from "../../common/BurgerMenu";

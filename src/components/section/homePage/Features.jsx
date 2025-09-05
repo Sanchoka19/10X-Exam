@@ -1,7 +1,7 @@
-import handStar from "../../../assets/icons/HandStar.svg";
-import callCenter from "../../../assets/icons/CallCenter.svg";
-import orderBox from "../../../assets/icons/orderBox.svg";
-import warrancy from "../../../assets/icons/warrancy.svg";
+import handStar from "/assets/icons/HandStar.svg";
+import callCenter from "/assets/icons/CallCenter.svg";
+import orderBox from "/assets/icons/orderBox.svg";
+import warrancy from "/assets/icons/warrancy.svg";
 
 const Features = () => {
 

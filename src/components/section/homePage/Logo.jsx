@@ -1,8 +1,8 @@
-import chanelLogo from "../../../assets/images/Chanel.png"
-import louisVuitonLogo from "../../../assets/images/louisVuiton.png"
-import pradaLogo from "../../../assets/images/prada.png"
-import calvinKleinLogo from "../../../assets/images/calvinKlein.png"
-import denimLogo from "../../../assets/images/denim.png"
+import chanelLogo from "/assets/images/Chanel.png"
+import louisVuitonLogo from "/assets/images/louisVuiton.png"
+import pradaLogo from "/assets/images/prada.png"
+import calvinKleinLogo from "/assets/images/calvinKlein.png"
+import denimLogo from "/assets/images/denim.png"
 
 const Logo = () => {
     return (

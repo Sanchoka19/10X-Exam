@@ -1,5 +1,5 @@
-import footerImg1 from "../../../assets/images/footer-img1.png";
-import footerImg2 from "../../../assets/images/footer-img2.png";
+import footerImg1 from "/assets/images/footer-img1.png";
+import footerImg2 from "/assets/images/footer-img2.png";
 import Button from "../../common/Button";
 
 const Subscribe = () => {

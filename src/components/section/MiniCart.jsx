@@ -2,8 +2,8 @@
 import { X } from "lucide-react";
 import CartCard from "../common/CartCard";
 
-import girl1 from "../../assets/images/manAcc.jpg"
-import girl2 from "../../assets/images/woman-acc1.jpg"
+import girl1 from "/assets/images/manAcc.jpg"
+import girl2 from "/assets/images/woman-acc1.jpg"
 import Button from "../common/Button";
 
 

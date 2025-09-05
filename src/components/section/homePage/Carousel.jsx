@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-import carousel1 from "../../../assets/images/Coursel-girl-1.jpg";
-import carousel2 from "../../../assets/images/Coursel-girl-2.jpg";
-import carousel3 from "../../../assets/images/Coursel-girl-3.jpg";
+import carousel1 from "/assets/images/Coursel-girl-1.jpg";
+import carousel2 from "/assets/images/Coursel-girl-2.jpg";
+import carousel3 from "/assets/images/Coursel-girl-3.jpg";
 
-import rightArrow from "../../../assets/icons/right-arrow.svg";
-import lefArrow from "../../../assets/icons/left-arrow.svg";
+import rightArrow from "/assets/icons/right-arrow.svg";
+import lefArrow from "/assets/icons/left-arrow.svg";
+
 import Button from "../../common/Button";
 import DigitalCountdown from "../../common/DigitalCountdown";
 

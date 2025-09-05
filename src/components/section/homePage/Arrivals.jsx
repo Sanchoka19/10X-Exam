@@ -2,20 +2,20 @@ import Card from "../../common/Card";
 import Button from "../../common/Button";
 
 
-import cardGirl1 from "../../../assets/images/cardGirl-1.jpg"
-import cardGirl2 from "../../../assets/images/cardGirl-2.jpg"
-import cardGirl3 from "../../../assets/images/CardGirl-3.jpg"
+import cardGirl1 from "/assets/images/cardGirl-1.jpg"
+import cardGirl2 from "/assets/images/cardGirl-2.jpg"
+import cardGirl3 from "/assets/images/CardGirl-3.jpg"
 
-import cardMan1 from "../../../assets/images/man-fashion-1.jpg"
-import cardMan2 from "../../../assets/images/man-fashion-2.jpg"
+import cardMan1 from "/assets/images/man-fashion-1.jpg"
+import cardMan2 from "/assets/images/man-fashion-2.jpg"
 
-import womenAcc1 from "../../../assets/images/woman-acc1.jpg"
-import womenAcc2 from "../../../assets/images/woman-acc2.jpg"
-import womenAcc3 from "../../../assets/images/woman-acc-3.jpg"
+import womenAcc1 from "/assets/images/woman-acc1.jpg"
+import womenAcc2 from "/assets/images/woman-acc2.jpg"
+import womenAcc3 from "/assets/images/woman-acc-3.jpg"
 
-import manAcc1 from "../../../assets/images/man-acc.jpg"
-import manAcc2 from "../../../assets/images/manAcc.jpg"
-import manAcc3 from "../../../assets/images/rolex.jpg"
+import manAcc1 from "/assets/images/man-acc.jpg"
+import manAcc2 from "/assets/images/manAcc.jpg"
+import manAcc3 from "/assets/images/rolex.jpg"
 
 
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import star from "../../assets/icons/Star 2.svg";
+import star from "/assets/icons/Star 2.svg";
 
 const Card = (props) => {
 

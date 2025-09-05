@@ -18,8 +18,8 @@ function App() {
       {/* <Newpass /> */}
       {/* <RegistrationPage /> */}
       {/* <Confirmation /> */}
-      <HomePage />
-      {/* <ShopPage /> */}
+      {/* <HomePage /> */}
+      <ShopPage />
       {/* <ProductPage /> */}
     </>
   )

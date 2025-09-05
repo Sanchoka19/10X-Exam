@@ -1,8 +1,8 @@
 import Button from "../../common/Button";
 
-import blackGuy from "../../../assets/images/BlackHerroGuy.png"
-import girlFromTop from "../../../assets/images/GirlForHerroUp.png"
-import curlyGuy from "../../../assets/images/CurlyGuyForHero.png"
+import blackGuy from "/assets/images/BlackHerroGuy.png"
+import girlFromTop from "/assets/images/GirlForHerroUp.png"
+import curlyGuy from "/assets/images/CurlyGuyForHero.png"
 
 const Herro = () => {
     return (

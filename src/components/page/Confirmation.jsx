@@ -5,7 +5,7 @@ import Input from "../common/Input";
 import Button from "../common/Button";
 
 // { Images }
-import MainImg from "../../assets/images/pexels-olly-972804.jpg";
+import MainImg from "/assets/images/pexels-olly-972804.jpg";
 
 
 

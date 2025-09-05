@@ -1,13 +1,10 @@
 import ShopCard from "../../common/ShopCard";
 
-import img1 from "../../../assets/images/filter-girl-1.png";
-import img2 from "../../../assets/images/filter-girl-2.png";
-import img3 from "../../../assets/images/filter-girl-3.png";
-import img4 from "../../../assets/images/filter-girl-4.png";
-
 import { useState } from "react";
 import MiniCart from "../MiniCart";
 import BurgerMenu from "../../common/BurgerMenu";
+
+import products from "../../../data/products.json"
 
 const page = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
@@ -27,43 +24,6 @@ const priceRanges = [
     { label: "$50 - $200", min: 50, max: 200 },
     { label: "$200 - $500", min: 200, max: 500 },
 ];
-
-
-const products = {
-    1: [
-        { id: 1, img: img3, title: "Classic Red Hat", brand: "ZARA", status: "Sold Out", price: 145, size: "M" },
-        { id: 2, img: img1, title: "Linen Summer Top", brand: "PRADA", status: "", price: 480, size: ["S", "M"] },
-        { id: 3, img: img4, title: "Oversized Black T-shirt", brand: "DENIM", status: "", price: 95, size: "XL" },
-        { id: 4, img: img2, title: "Sporty Cap", brand: "LOUIS VUITTONE", status: "Sold Out", price: 310, size: ["L", "XL"] },
-        { id: 5, img: img3, title: "Casual Hoodie", brand: "H&M", status: "", price: 570, size: "S" },
-        { id: 6, img: img4, title: "Denim Jacket", brand: "ZARA", status: "", price: 220, size: "L" },
-        { id: 7, img: img1, title: "Slim Fit Shirt", brand: "PRADA", status: "", price: 405, size: ["M", "XL"] },
-        { id: 8, img: img2, title: "Cotton Shorts", brand: "DENIM", status: "Sold Out", price: 190, size: "S" },
-        { id: 9, img: img3, title: "Leather Jacket", brand: "LOUIS VUITTONE", status: "", price: 330, size: ["L", "XL"] }
-    ],
-    2: [
-        { id: 1, img: img4, title: "Vintage Hat", brand: "H&M", status: "Sold Out", price: 720, size: "XL" },
-        { id: 2, img: img1, title: "Casual Blouse", brand: "ZARA", status: "", price: 260, size: ["M", "L"] },
-        { id: 3, img: img2, title: "Graphic Tee", brand: "PRADA", status: "", price: 135, size: "S" },
-        { id: 4, img: img3, title: "Bomber Jacket", brand: "DENIM", status: "", price: 560, size: ["L", "XL"] },
-        { id: 5, img: img4, title: "Basic Hoodie", brand: "LOUIS VUITTONE", status: "Sold Out", price: 295, size: "M" },
-        { id: 6, img: img2, title: "Cargo Pants", brand: "H&M", status: "", price: 415, size: ["S", "M"] },
-        { id: 7, img: img1, title: "Long Sleeve Shirt", brand: "ZARA", status: "", price: 175, size: "L" },
-        { id: 8, img: img4, title: "Windbreaker", brand: "PRADA", status: "", price: 505, size: ["XL", "M"] },
-        { id: 9, img: img3, title: "Jogger Pants", brand: "DENIM", status: "", price: 260, size: "S" }
-    ],
-    3: [
-        { id: 1, img: img2, title: "Streetwear Cap", brand: "LOUIS VUITTONE", status: "Sold Out", price: 430, size: "M" },
-        { id: 2, img: img4, title: "Sleeveless Top", brand: "H&M", status: "", price: 160, size: ["S", "XL"] },
-        { id: 3, img: img1, title: "Basic White Tee", brand: "ZARA", status: "", price: 390, size: "L" },
-        { id: 4, img: img2, title: "Denim Shorts", brand: "PRADA", status: "Sold Out", price: 250, size: ["M", "L"] },
-        { id: 5, img: img3, title: "Wool Sweater", brand: "DENIM", status: "", price: 600, size: "XL" },
-        { id: 6, img: img1, title: "Striped Shirt", brand: "LOUIS VUITTONE", status: "", price: 310, size: ["S", "M"] },
-        { id: 7, img: img4, title: "Fleece Jacket", brand: "H&M", status: "", price: 490, size: "L" },
-        { id: 8, img: img3, title: "Training Shorts", brand: "ZARA", status: "Sold Out", price: 205, size: ["XL", "S"] },
-        { id: 9, img: img2, title: "Formal Shirt", brand: "PRADA", status: "", price: 355, size: "M" }
-    ]
-}
 
 const Filter = (props) => {
     const [priceRange, setPriceRange] = useState({ min: 0, max: 0 });
