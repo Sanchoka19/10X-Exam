@@ -1,9 +1,9 @@
 const MainFooter = () => {
     return (
         <div className="py-[40px] px-[64px] border-t-[4px] border-[#f9f9f9] bg-white flex flex-col gap-[32px] items-center">
-            <div className="flex justify-between w-full">
+            <div className="flex gap-[24px] md:justify-between items-center w-full flex-wrap">
                 <span className="font-black text-[40px] text-black cursor-pointer">VELOURA</span>
-                <ul className="flex gap-[16px]">
+                <ul className="flex gap-[16px] flex-wrap justify-center">
                     <li className="cursor-pointer">Support Center</li>
                     <li className="cursor-pointer">Invoicing</li>
                     <li className="cursor-pointer">Contract</li>

@@ -6,7 +6,7 @@ import warrancy from "../../../assets/icons/warrancy.svg";
 const Features = () => {
 
     return (
-        <div className="flex justify-center p-[120px] flex-wrap lg:gap-[120px] gap-[60px] items-start bg-[#f9f9f9]">
+        <div className="flex justify-center md:p-[120px] py-[120px] px-[10px] flex-wrap lg:gap-[120px] gap-[60px] items-start bg-[#f9f9f9]">
             <div className="flex gap-[12px] items-center">
                 <img src={handStar} alt="handStar" />
                 <div className="flex flex-col gap-8px">

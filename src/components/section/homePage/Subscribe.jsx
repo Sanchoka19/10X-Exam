@@ -4,7 +4,7 @@ import Button from "../../common/Button";
 
 const Subscribe = () => {
     return (
-        <div className="flex justify-center py-[120px] bg-white">
+        <div className="flex justify-center py-[120px] px-[10px] bg-white">
             <img src={footerImg1} alt="footerImg1" className="hidden xl:flex" />
             <div className="flex flex-col justify-center items-center gap-[32px]">
                 <div className="flex flex-col justify-center gap-[24px]">

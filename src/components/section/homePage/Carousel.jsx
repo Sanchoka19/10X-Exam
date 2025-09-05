@@ -66,7 +66,7 @@ const Carousel = () => {
                   className="w-full h-full object-cover rounded-2xl"
                 />
                 <div className="absolute bottom-4 left-4 bg-white px-6 py-4 rounded-2xl shadow-md shadow-black/40 absolute">
-                  <p className="text-[32px] font-medium">{item.title}</p>
+                  <p className="md:text-[32px] font-medium">{item.title}</p>
                   <span className="text-[24px] font-bold">{item.discount}</span>
                 </div>
               </div>

@@ -39,3 +39,7 @@ input {
 body {
   background-color: #f9f9f9;
 }
+
+img {
+  border-radius: 12px;
+}

@@ -6,6 +6,7 @@ import img3 from "../../../assets/images/filter-girl-3.png";
 import img4 from "../../../assets/images/filter-girl-4.png";
 
 import { useState } from "react";
+import MiniCart from "../MiniCart";
 
 const page = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
@@ -63,7 +64,7 @@ const products = {
     ]
 }
 
-const Filter = () => {
+const Filter = (props) => {
     const [priceRange, setPriceRange] = useState({ min: 0, max: 0 });
     const [activeClotheSize, setActiveClotheSize] = useState("");
     const [activeBrand, setActiveBrand] = useState("");
@@ -85,6 +86,8 @@ const Filter = () => {
 
     return (
         <div className="flex gap-[24px] justify-center p-[80px]">
+            {props.param && <MiniCart onClick={(() => props.fun(!props.param))} />}
+
             <div className="lg:w-2/7 flex flex-col gap-[32px] hidden lg:flex">
 
                 <div className="flex flex-col gap-[24px] bg-white px-[40px] py-[50px] rounded-md w-fit sticky top-[40px]">

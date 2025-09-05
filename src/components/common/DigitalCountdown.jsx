@@ -25,22 +25,22 @@ function DigitalCountdown({ initialSeconds }) {
     const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
     const seconds = String(timeLeft % 60).padStart(2, "0");
 
-    const blockStyle = "bg-white rounded-lg shadow-md p-4 text-center font-mono text-5xl";
+    const blockStyle = "bg-white rounded-lg shadow-md p-4 text-center font-mono text-2xl";
 
     return (
         <div className="flex flex-col items-start gap-8">
             <div className="flex gap-7">
                 <div className={blockStyle}>
-                    {days}<div className="text-3xl mt-1">Days</div>
+                    {days}<div className="md:text-3xl text-xl mt-1">Days</div>
                 </div>
                 <div className={blockStyle}>
-                    {hours}<div className="text-3xl mt-1">Hr</div>
+                    {hours}<div className="md:text-3xl text-xl mt-1">Hr</div>
                 </div>
                 <div className={blockStyle}>
-                    {minutes}<div className="text-3xl mt-1">Mins</div>
+                    {minutes}<div className="md:text-3xl text-xl mt-1">Mins</div>
                 </div>
                 <div className={blockStyle}>
-                    {seconds}<div className="text-3xl mt-1">Sec</div>
+                    {seconds}<div className="md:text-3xl text-xl mt-1">Sec</div>
                 </div>
             </div>
         </div>

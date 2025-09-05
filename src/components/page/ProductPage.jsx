@@ -1,21 +1,25 @@
 import SecondaryHeader from "../layout/SecondaryHeader";
-import Filter from "../section/shopPage/Filter";
 import Feature from "../section/homePage/Features";
+import Carousel from "../section/homePage/Carousel";
 import Subscribe from "../section/homePage/Subscribe";
 import Footer from "../layout/MainFooter";
+import ProductDetails from "../section/productPage/ProductDetails";
+
 import { useState } from "react";
 
-const ShopPage = () => {
+const ProductPage = () => {
     const [active, setActive] = useState(false);
+
     return (
         <div>
             <SecondaryHeader onClick={() => setActive(!active)} />
-            <Filter fun={setActive} param={active}/>
+            <ProductDetails fun={setActive} param={active} />
             <Feature />
+            <Carousel />
             <Subscribe />
             <Footer />
         </div>
     )
 }
 
-export default ShopPage;
+export default ProductPage;
