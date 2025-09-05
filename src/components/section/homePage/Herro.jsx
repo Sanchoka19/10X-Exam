@@ -3,6 +3,7 @@ import Button from "../../common/Button";
 import blackGuy from "/assets/images/BlackHerroGuy.png"
 import girlFromTop from "/assets/images/GirlForHerroUp.png"
 import curlyGuy from "/assets/images/CurlyGuyForHero.png"
+import { Link } from "react-router-dom";
 
 const Herro = () => {
     return (
@@ -44,7 +45,7 @@ const Herro = () => {
                 <span className="text-[18px] md:text-[20px] lg:text-[24px] font-bold">
                     NEW COLLECTION
                 </span>
-                <Button colorClass="bg-black font-medium text-white mt-[12px]" value="SHOP NOW" />
+                <Link to={"/shop"}><Button colorClass="bg-black font-medium text-white mt-[12px]" value="SHOP NOW" /></Link>
             </div>
 
             {/* Bottom small image (tablet/desktop only) */}

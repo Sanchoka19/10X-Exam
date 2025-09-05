@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 // { Components }
 import Input from "../common/Input";
 import Button from "../common/Button";
@@ -9,6 +10,7 @@ import SocialNetButton from "../common/SocialNetButton";
 import MainImg from "/assets/images/pexels-olly-919453.jpg";
 import googleIco from "/assets/icons/GoogleIco.svg";
 import iphoneIco from "/assets/icons/ApleIco.svg";
+import { Link } from "react-router-dom";
 
 
 const RegistrationPage = () => {
@@ -80,11 +82,11 @@ const RegistrationPage = () => {
 
             <div className="w-1/2 h-full flex flex-col justify-center items-center p-3 gap-[40px]">
                 <h1 className="font-black">VELOURA</h1>
-                <div className="w-full flex flex-col gap-[16px] max-w-[80%]">
+                <div className="w-full flex flex-col gap-[16px] max-w-[80%] items-center">
                     <span className="text-32px font-bold">Create Account</span>
-                    <div className="w-full flex gap-[12px]">
-                        <SocialNetButton src={googleIco} value="Sign up with Google" />
-                        <SocialNetButton src={iphoneIco} value="Sign up with Apple" />
+                    <div className="w-full flex gap-[12px] justify-center">
+                        <Link to={"/"}><SocialNetButton src={googleIco} value="Sign up with Google" /></Link>
+                        <Link to={"/"}><SocialNetButton src={iphoneIco} value="Sign up with Apple" /></Link>
                     </div>
                 </div>
                 <div className="flex gap-[12px] w-full items-center justify-center">
@@ -122,14 +124,16 @@ const RegistrationPage = () => {
                         </div>
                     </div>
                     <div className="flex flex-col gap-[16px] w-full items-center">
-                        <Button
-                            value="Create Account"
-                            colorClass="bg-black text-white hover:bg-gray-800"
-                            sizeClass="w-[90%] pt-[20px] pb-[20px]"
-                            fontSizeClass="text-[16px]"
-                            type="submit"
-                        />
-                        <span className="w-[90%] text-center cursor-pointer">Already have an account? <button type="button" className="text-[#5B86E5]">Login</button></span>
+                        <Link to={"/"} className="w-full flex justify-center">
+                            <Button
+                                value="Create Account"
+                                colorClass="bg-black text-white hover:bg-gray-800"
+                                sizeClass="w-[90%] pt-[20px] pb-[20px]"
+                                fontSizeClass="text-[16px]"
+                                type="submit"
+                            />
+                        </Link>
+                        <span className="w-[90%] text-center cursor-pointer">Already have an account? <Link to={"/Login"}><button type="button" className="text-[#5B86E5]">Login</button></Link></span>
                     </div>
                 </form>
             </div >

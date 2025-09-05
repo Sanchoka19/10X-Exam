@@ -6,11 +6,19 @@ import Footer from "../layout/MainFooter";
 import { useState } from "react";
 
 const ShopPage = () => {
-    const [active, setActive] = useState(false);
+    const [burgerActive, setBurgerActive] = useState(false);
+    const [cartActive, setCartActive] = useState(false);
+
     return (
         <div>
-            <SecondaryHeader onClick={() => setActive(!active)} />
-            <Filter fun={setActive} param={active} />
+            <SecondaryHeader
+                onClickMenu={() => setBurgerActive(!burgerActive)}
+                onClickHandbag={() => setCartActive(!cartActive)}
+            />
+            <Filter
+                setShowBurger={setBurgerActive} showBurger={burgerActive}
+                setShowCart={setCartActive} showCart={cartActive}
+            />
             <Feature />
             <Subscribe />
             <Footer />

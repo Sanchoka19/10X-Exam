@@ -3,9 +3,9 @@
 // { Components }
 import Input from "../common/Input";
 import Button from "../common/Button";
-
 // { Images }
 import MainImg from "/assets/images/pexels-olly-972804.jpg";
+import { Link } from "react-router-dom";
 
 
 
@@ -30,13 +30,15 @@ const ForgetPassword = () => {
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Forget Password</span>
                     <Input type="input" inputVal="Email Address" />
                     <div className="flex flex-col gap-[16px] w-full items-center">
-                        <Button
-                            value="Send Confirmation Code"
-                            colorClass="bg-black text-white hover:bg-gray-800"
-                            sizeClass="w-[90%] pt-[20px] pb-[20px]"
-                            fontSizeClass="text-[16px]"
-                            type="submit"
-                        />
+                        <Link to={"/Confirm"} className="flex w-full justify-center">
+                            <Button
+                                value="Send Confirmation Code"
+                                colorClass="bg-black text-white hover:bg-gray-800"
+                                sizeClass="w-[90%] pt-[20px] pb-[20px]"
+                                fontSizeClass="text-[16px]"
+                                type="submit"
+                            />
+                        </Link>
                         <span className="w-[90%] text-center cursor-pointer">Already have an account? <button type="button" className="text-[#5B86E5]">Login</button></span>
                     </div>
                 </form>

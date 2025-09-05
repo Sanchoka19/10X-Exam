@@ -1,4 +1,5 @@
 import './App.css'
+import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./components/page/HomePage";
 import ShopPage from "./components/page/ShopPage";
@@ -13,14 +14,17 @@ import ProductPage from './components/page/ProductPage';
 function App() {
   return (
     <>
-      {/* <LoginPage /> */}
-      {/* <ForgetPassword /> */}
-      {/* <Newpass /> */}
-      {/* <RegistrationPage /> */}
-      {/* <Confirmation /> */}
-      {/* <HomePage /> */}
-      <ShopPage />
-      {/* <ProductPage /> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/SignUp" element={<RegistrationPage />} />
+        <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/Confirm" element={<Confirmation />} />
+        <Route path="/Newpass" element={<Newpass />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/product" element={<ShopPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+      </Routes>
     </>
   )
 }

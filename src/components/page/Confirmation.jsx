@@ -1,11 +1,10 @@
-// import { useState } from "react";
-
 // { Components }
 import Input from "../common/Input";
 import Button from "../common/Button";
 
 // { Images }
 import MainImg from "/assets/images/pexels-olly-972804.jpg";
+import { Link } from "react-router-dom";
 
 
 
@@ -30,13 +29,15 @@ const Confirmation = () => {
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Enter The Confirmation Code</span>
                     <Input type="input" inputVal="Confirmation Code" />
                     <div className="flex flex-col gap-[16px] w-full items-center">
-                        <Button
-                            value="Recover Account"
-                            colorClass="bg-black text-white hover:bg-gray-800"
-                            sizeClass="w-[90%] pt-[20px] pb-[20px]"
-                            fontSizeClass="text-[16px]"
-                            type="submit"
-                        />
+                        <Link to={"/Newpass"} className="flex w-full justify-center">
+                            <Button
+                                value="Recover Account"
+                                colorClass="bg-black text-white hover:bg-gray-800"
+                                sizeClass="w-[90%] pt-[20px] pb-[20px]"
+                                fontSizeClass="text-[16px]"
+                                type="submit"
+                            />
+                        </Link>
                         <span className="w-[90%] text-center cursor-pointer">Didn’t receive Confirmation Code?  <button type="button" className="text-[#5B86E5]">Resend Now</button></span>
                     </div>
                 </form>

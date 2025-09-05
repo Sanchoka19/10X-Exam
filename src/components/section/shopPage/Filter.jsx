@@ -5,6 +5,7 @@ import MiniCart from "../MiniCart";
 import BurgerMenu from "../../common/BurgerMenu";
 
 import products from "../../../data/products.json"
+import { Link } from "react-router-dom";
 
 const page = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
@@ -47,8 +48,8 @@ const Filter = (props) => {
 
     return (
         <div className="flex gap-[24px] justify-center p-[80px]">
-            {props.param && <BurgerMenu onClick={(() => props.fun(false))} />}
-            {props.param && <MiniCart onClick={(() => props.fun(false))} />}
+            {props.showBurger && <BurgerMenu onClick={() => props.setShowBurger(false)} />}
+            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} />}
 
             <div className="lg:w-2/7 flex flex-col gap-[32px] hidden lg:flex">
 
@@ -106,13 +107,14 @@ const Filter = (props) => {
 
             <div className="flex flex-col gap-[64px] items-center lg:w-5/7">
                 <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
-                    {filteredProducts.map(item => (
+                    {filteredProducts.map(product => (
                         <ShopCard
-                            key={item.id}
-                            img={item.img}
-                            title={item.title}
-                            price={item.price}
-                            status={item.status}
+                            key={product.id}
+                            id={product.id}
+                            img={product.img}
+                            title={product.title}
+                            price={product.price}
+                            status={product.status}
                         />
                     ))}
                 </div>

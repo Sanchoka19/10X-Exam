@@ -1,20 +1,21 @@
 import { User, Menu, Handbag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SecondaryHeader = (props) => {
     return (
         <header className="py-[30px] px-[20px] lg:py-[30px] lg:px-[60px] flex justify-between items-center">
-            <span className="font-black text-[32px] md:text-[40px] text-black cursor-pointer">VELOURA</span>
+            <Link to={"/"}><span className="font-black text-[32px] md:text-[40px] text-black cursor-pointer">VELOURA</span></Link>
             <div className="items-center gap-[32px] hidden md:flex">
                 <nav className="flex">
                     <ul className="flex gap-[24px] ">
                         <li>
-                            <a href="#">Home</a>
+                            <Link to={"/"}>Home</Link>
                         </li>
                         <li>
-                            <a href="#">Shop</a>
+                            <Link to={"/shop"}>Shop</Link>
                         </li>
                         <li>
-                            <a href="#">Product</a>
+                            <Link to={"/shop"}>Product</Link>
                         </li>
                     </ul>
                 </nav>
