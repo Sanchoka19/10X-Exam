@@ -7,6 +7,7 @@ import img4 from "../../../assets/images/filter-girl-4.png";
 
 import { useState } from "react";
 import MiniCart from "../MiniCart";
+import BurgerMenu from "../../common/BurgerMenu";
 
 const page = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
@@ -86,7 +87,8 @@ const Filter = (props) => {
 
     return (
         <div className="flex gap-[24px] justify-center p-[80px]">
-            {props.param && <MiniCart onClick={(() => props.fun(!props.param))} />}
+            {props.param && <BurgerMenu onClick={(() => props.fun(false))} />}
+            {props.param && <MiniCart onClick={(() => props.fun(false))} />}
 
             <div className="lg:w-2/7 flex flex-col gap-[32px] hidden lg:flex">
 

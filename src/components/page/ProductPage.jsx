@@ -8,12 +8,19 @@ import ProductDetails from "../section/productPage/ProductDetails";
 import { useState } from "react";
 
 const ProductPage = () => {
-    const [active, setActive] = useState(false);
+    const [burgerActive, setBurgerActive] = useState(false);
+    const [cartActive, setCartActive] = useState(false);
 
     return (
         <div>
-            <SecondaryHeader onClick={() => setActive(!active)} />
-            <ProductDetails fun={setActive} param={active} />
+            <SecondaryHeader
+                onClickMenu={() => setBurgerActive(!burgerActive)}
+                onClickHandbag={() => setCartActive(!cartActive)}
+            />
+            <ProductDetails
+                setShowBurger={setBurgerActive} showBurger={burgerActive}
+                setShowCart={setCartActive} showCart={cartActive}
+            />
             <Feature />
             <Carousel />
             <Subscribe />

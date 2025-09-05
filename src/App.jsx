@@ -18,9 +18,9 @@ function App() {
       {/* <Newpass /> */}
       {/* <RegistrationPage /> */}
       {/* <Confirmation /> */}
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <ShopPage /> */}
-      <ProductPage />
+      {/* <ProductPage /> */}
     </>
   )
 }

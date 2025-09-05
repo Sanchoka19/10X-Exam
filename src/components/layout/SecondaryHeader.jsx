@@ -1,4 +1,4 @@
-import { User, ShoppingCart, Menu } from "lucide-react";
+import { User, Menu, Handbag } from "lucide-react";
 
 const SecondaryHeader = (props) => {
     return (
@@ -20,11 +20,9 @@ const SecondaryHeader = (props) => {
                 </nav>
             </div>
             <div className="flex gap-[24px]">
-                <div className="flex gap-[24px]">
-                    <User className="w-6 h-6 cursor-pointer" />
-                    <ShoppingCart className="w-6 h-6 cursor-pointer" onClick={props.onClick} />
-                </div>
-                <Menu className="md:hidden cursor-pointer w-6 h-6" />
+                <User className="w-6 h-6 cursor-pointer" />
+                <Handbag className="w-6 h-6 cursor-pointer" onClick={props.onClickHandbag} />
+                <Menu className="md:hidden cursor-pointer w-6 h-6" onClick={props.onClickMenu} />
             </div>
         </header >
     )

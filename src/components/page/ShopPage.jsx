@@ -10,7 +10,7 @@ const ShopPage = () => {
     return (
         <div>
             <SecondaryHeader onClick={() => setActive(!active)} />
-            <Filter fun={setActive} param={active}/>
+            <Filter fun={setActive} param={active} />
             <Feature />
             <Subscribe />
             <Footer />

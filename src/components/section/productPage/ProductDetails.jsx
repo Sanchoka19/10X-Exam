@@ -10,6 +10,7 @@ import img3 from "../../../assets/images/filter-girl-3.png";
 import img4 from "../../../assets/images/filter-girl-4.png";
 
 import MiniCart from "../MiniCart"
+import BurgerMenu from "../../common/BurgerMenu";
 
 const clotheSize = [{ size: "S" }, { size: "M" }, { size: "L" }, { size: "XL" }];
 
@@ -20,10 +21,11 @@ const ProductDetails = (props) => {
     const [amount, setAmount] = useState("1");
 
     return (
-        <div className="flex gap-[60px] w-full justify-center lg:p-[120px] p-[10px] flex-wrap ">
-            {
-                props.param && <MiniCart onClick={(() => props.fun(!props.param))} />
-            }
+        <div className="flex gap-[60px] w-full justify-center lg:p-[60px] p-[10px] flex-wrap ">
+            {props.showBurger && <BurgerMenu onClick={() => props.setShowBurger(false)} />}
+            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} />}
+
+
             <div className="flex gap-[24px] flex-wrap justify-center">
                 <div className="flex xl:flex-col gap-[16px] flex-wrap order-2 lg:order1">
                     <img src={girlImg} alt="details-img" className="w-[58px] h-[80px] cursor-pointer" />
@@ -39,7 +41,7 @@ const ProductDetails = (props) => {
                 </div>
             </div>
 
-            <div className="flex flex-col max-w-[590px] w-full justify-between">
+            <div className="flex flex-col max-w-[590px] w-full justify-between gap-[90px]">
                 <div className="flex flex-col w-full gap-[24px]">
                     <div className="flex flex-col gap-[8px]">
                         <span className="text-[#666666] text-2xl">Veloura</span>
