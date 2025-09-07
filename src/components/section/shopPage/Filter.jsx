@@ -32,6 +32,7 @@ const Filter = (props) => {
     const [activeBrand, setActiveBrand] = useState("");
     const [activePage, setActivePage] = useState("1");
 
+
     const currentProducts = products[activePage] || [];
 
     const filteredProducts = currentProducts.filter(item => {

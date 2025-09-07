@@ -5,11 +5,7 @@ import Subscribe from "../section/homePage/Subscribe";
 import Footer from "../layout/MainFooter";
 import ProductDetails from "../section/productPage/ProductDetails";
 
-import { useState } from "react";
-
-const ProductPage = () => {
-    const [burgerActive, setBurgerActive] = useState(false);
-    const [cartActive, setCartActive] = useState(false);
+const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, products, cart }) => {
 
     return (
         <div>
@@ -20,6 +16,9 @@ const ProductPage = () => {
             <ProductDetails
                 setShowBurger={setBurgerActive} showBurger={burgerActive}
                 setShowCart={setCartActive} showCart={cartActive}
+                addToCart={addToCart}
+                products={products}
+                cart={cart} 
             />
             <Feature />
             <Carousel />

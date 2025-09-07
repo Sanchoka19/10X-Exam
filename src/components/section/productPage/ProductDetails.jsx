@@ -8,13 +8,13 @@ import MiniCart from "../MiniCart";
 import BurgerMenu from "../../common/BurgerMenu";
 
 const ProductDetails = (props) => {
-    const { id } = useParams(); // get product id from URL
+    const { id } = useParams();
     const [activeClotheSize, setActiveClotheSize] = useState("");
     const [amount, setAmount] = useState(1);
     const [mainImage, setMainImage] = useState("");
 
-    // Search all categories for product
     let product = null;
+
     for (const key in productsData) {
         const found = productsData[key].find(p => p.id === parseInt(id));
         if (found) {
@@ -25,26 +25,22 @@ const ProductDetails = (props) => {
 
     if (!product) return <div className="text-center mt-10">Product not found</div>;
 
-    // Handle sizes dynamically
     const sizes = Array.isArray(product.size) ? product.size : [product.size];
 
-    // Set default main image if not set
     if (!mainImage) setMainImage(product.img);
     if (!activeClotheSize) setActiveClotheSize(sizes[0]);
 
     return (
         <div className="flex gap-[60px] w-full justify-center lg:p-[60px] p-[10px] flex-wrap">
-            {/* Burger & Cart */}
             {props.showBurger && <BurgerMenu onClick={() => props.setShowBurger(false)} />}
-            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} />}
+            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} cart={props.cart} />}
 
-            {/* Images */}
             <div className="flex gap-[24px] flex-wrap justify-center">
                 <div className="flex xl:flex-col gap-[16px] flex-wrap order-2 lg:order-1">
                     {sizes.map((size, index) => (
                         <img
                             key={index}
-                            src={product.img} // only one image in your JSON
+                            src={product.img}
                             alt={`${product.title}-thumb-${index}`}
                             className="w-[58px] h-[80px] cursor-pointer"
                             onClick={() => setMainImage(product.img)}
@@ -126,6 +122,7 @@ const ProductDetails = (props) => {
                             colorClass="bg-transparent border-1 border-black"
                             sizeClass="w-full"
                             value="Add to cart"
+                            onClick={() => props.addToCart(product)}
                         />
                     </div>
                 </div>

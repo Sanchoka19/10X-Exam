@@ -12,7 +12,7 @@ const CartCard = (props) => {
             <div className="flex flex-col gap-[12px] py-[10px] px-[20px] justify-between">
                 <div className="flex flex-col gap-[8px]">
                     <span className="text-2xl font-bold">{props.title}</span>
-                    <span className="text-xl font-bold">{props.price}</span>
+                    <span className="text-xl font-bold">{`$ ${props.price}`}</span>
                 </div>
                 <div className="p-[10px] border-1 rounded-xl border-[#EEEEEE] w-fit flex items-center gap-[24px]">
                     <button className="border-none" onClick={() => setAmount(amount <= 1 ? 0 : amount - 1)}><Minus /></button>

@@ -3,12 +3,8 @@ import Filter from "../section/shopPage/Filter";
 import Feature from "../section/homePage/Features";
 import Subscribe from "../section/homePage/Subscribe";
 import Footer from "../layout/MainFooter";
-import { useState } from "react";
 
-const ShopPage = () => {
-    const [burgerActive, setBurgerActive] = useState(false);
-    const [cartActive, setCartActive] = useState(false);
-
+const ShopPage = ({burgerActive, setBurgerActive, cartActive, setCartActive}) => {
     return (
         <div>
             <SecondaryHeader
