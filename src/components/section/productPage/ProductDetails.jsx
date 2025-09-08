@@ -33,7 +33,10 @@ const ProductDetails = (props) => {
     return (
         <div className="flex gap-[60px] w-full justify-center lg:p-[60px] p-[10px] flex-wrap">
             {props.showBurger && <BurgerMenu onClick={() => props.setShowBurger(false)} />}
-            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} cart={props.cart} />}
+            {props.showCart && <MiniCart
+                onClick={() => props.setShowCart(false)}
+                cart={props.cart}
+                updateQuantity={props.updateQuantity} />}
 
             <div className="flex gap-[24px] flex-wrap justify-center">
                 <div className="flex xl:flex-col gap-[16px] flex-wrap order-2 lg:order-1">
@@ -52,7 +55,6 @@ const ProductDetails = (props) => {
                 </div>
             </div>
 
-            {/* Product Info */}
             <div className="flex flex-col max-w-[590px] w-full justify-between gap-[90px]">
                 <div className="flex flex-col w-full gap-[24px]">
                     <div className="flex flex-col gap-[8px]">
@@ -122,7 +124,7 @@ const ProductDetails = (props) => {
                             colorClass="bg-transparent border-1 border-black"
                             sizeClass="w-full"
                             value="Add to cart"
-                            onClick={() => props.addToCart(product)}
+                            onClick={() => props.addToCart(product, amount)}
                         />
                     </div>
                 </div>

@@ -80,7 +80,7 @@ const RegistrationPage = () => {
                 />
             </div>
 
-            <div className="w-1/2 h-full flex flex-col justify-center items-center p-3 gap-[40px]">
+            <div className="lg:w-1/2 w-screen py-[40px] h-full flex flex-col justify-center items-center p-3 gap-[40px]">
                 <h1 className="font-black">VELOURA</h1>
                 <div className="w-full flex flex-col gap-[16px] max-w-[80%] items-center">
                     <span className="text-32px font-bold">Create Account</span>
@@ -124,16 +124,19 @@ const RegistrationPage = () => {
                         </div>
                     </div>
                     <div className="flex flex-col gap-[16px] w-full items-center">
-                        <Link to={"/"} className="w-full flex justify-center">
-                            <Button
-                                value="Create Account"
-                                colorClass="bg-black text-white hover:bg-gray-800"
-                                sizeClass="w-[90%] pt-[20px] pb-[20px]"
-                                fontSizeClass="text-[16px]"
-                                type="submit"
-                            />
-                        </Link>
-                        <span className="w-[90%] text-center cursor-pointer">Already have an account? <Link to={"/Login"}><button type="button" className="text-[#5B86E5]">Login</button></Link></span>
+                        <Button
+                            value="Create Account"
+                            colorClass="bg-black text-white hover:bg-gray-800"
+                            sizeClass="w-[90%] pt-[20px] pb-[20px]"
+                            fontSizeClass="text-[16px]"
+                            type="submit"   // ✅ this submits the form
+                        />
+                        <span className="w-[90%] text-center cursor-pointer">
+                            Already have an account?{" "}
+                            <Link to={"/Login"}>
+                                <button type="button" className="text-[#5B86E5]">Login</button>
+                            </Link>
+                        </span>
                     </div>
                 </form>
             </div >

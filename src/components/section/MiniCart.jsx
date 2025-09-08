@@ -3,8 +3,7 @@ import CartCard from "../common/CartCard";
 
 import Button from "../common/Button";
 
-
-const MiniCart = ({ onClick, cart = [] }) => {
+const MiniCart = ({ onClick, cart = [], updateQuantity }) => {
     const subTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
@@ -23,12 +22,13 @@ const MiniCart = ({ onClick, cart = [] }) => {
                 <div className="flex-1 min-h-0 overflow-y-auto mt-6 space-y-6">
                     {cart.map(item => (
                         <CartCard
-                            key={`${item.id}-${item.size}`} // use id+size as key to make them unique
+                            key={`${item.id}-${item.size}`}
                             img={item.img}
                             title={item.title}
                             size={item.size}
                             price={item.price}
                             quantity={item.quantity}
+                            onQuantityChange={(newQty) => updateQuantity(item.id, item.size, newQty)}
                         />
                     ))}
                 </div>
@@ -45,7 +45,6 @@ const MiniCart = ({ onClick, cart = [] }) => {
                 </div>
             </div>
         </div>
-
     )
 }
 

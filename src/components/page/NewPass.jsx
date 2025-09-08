@@ -4,13 +4,49 @@ import Button from "../common/Button";
 
 // { Images }
 import MainImg from "/assets/images/pexels-olly-972804.jpg";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Newpass = () => {
+    const [form, setForm] = useState({ password: '', confirmPassword: '' });
+    const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm(prev => (
+            { ...prev, [name]: value }
+        ))
+    }
+
+    const validate = () => {
+        const err = {};
+
+        if (form.password.length < 8) {
+            err.password = "არასკმარისი სიმბოლოების რაოდენობა"
+        }
+
+        if (form.password !== form.confirmPassword) {
+            err.confirmPassword = "არ ემთხვევა პაროლები ერთმანეთს"
+        }
+
+        return err;
+    }
+
     const handleOnSubmit = (e) => {
         e.preventDefault();
+
+        const v = validate();
+        setErrors(v);
+
+        if (Object.keys(v).length > 0) return;
+
+        setErrors({});
+        setForm({ password: '', confirmPassword: '' });
+        alert("თქვენი რეგისტრაცია წარმატებით დასრულდა");
+        navigate("/");
     }
 
     return (
@@ -27,18 +63,22 @@ const Newpass = () => {
                 <h1 className="font-black">VELOURA</h1>
                 <form onSubmit={handleOnSubmit} className="flex flex-col gap-4 w-full max-w-[80%] items-center">
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Enter Your New Password</span>
-                    <Input type="input" inputVal="New Password" />
-                    <Input type="input" inputVal="Confirmation Password" />
+                    <div className="flex flex-col w-full">
+                        <Input type="input" inputVal="Password" name="password" value={form.password} onChange={handleChange} />
+                        {errors.password && <span className="text-red-400">{errors.password}</span>}
+                    </div>
+                    <div className="flex flex-col w-full">
+                        <Input type="input" inputVal="Confirm Password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} />
+                        {errors.confirmPassword && <span className="text-red-400">{errors.confirmPassword}</span>}
+                    </div>
                     <div className="flex flex-col gap-[16px] w-full items-center">
-                        <Link to={"/"} className="flex w-full justify-center">
-                            <Button
-                                value="Submit"
-                                colorClass="bg-[#5B86E5] text-white hover:bg-gray-800"
-                                sizeClass="w-[90%] pt-[20px] pb-[20px]"
-                                fontSizeClass="text-[16px]"
-                                type="submit"
-                            />
-                        </Link>
+                        <Button
+                            value="Submit"
+                            colorClass="bg-black text-white hover:bg-gray-800"
+                            sizeClass="w-[90%] pt-[20px] pb-[20px]"
+                            fontSizeClass="text-[16px]"
+                            type="submit"
+                        />
                     </div>
                 </form>
             </div>

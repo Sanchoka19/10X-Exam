@@ -5,7 +5,8 @@ import Subscribe from "../section/homePage/Subscribe";
 import Footer from "../layout/MainFooter";
 import ProductDetails from "../section/productPage/ProductDetails";
 
-const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, products, cart }) => {
+
+const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, products, cart, updateQuantity }) => {
 
     return (
         <div>
@@ -18,7 +19,8 @@ const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive,
                 setShowCart={setCartActive} showCart={cartActive}
                 addToCart={addToCart}
                 products={products}
-                cart={cart} 
+                cart={cart}
+                updateQuantity={updateQuantity}
             />
             <Feature />
             <Carousel />
