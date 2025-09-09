@@ -52,7 +52,7 @@ const Filter = (props) => {
             {props.showBurger && <BurgerMenu
                 onClick={() => props.setShowBurger(false)}
             />}
-            
+
             {props.showCart && <MiniCart
                 onClick={() => props.setShowCart(false)}
                 cart={props.cart}
@@ -72,7 +72,7 @@ const Filter = (props) => {
                                     className={activeClotheSize == item.size
                                         ? "py-[10px] w-[42px] flex justify-center border-2 border-black rounded-xl cursor-pointer font-bold"
                                         : "py-[10px] w-[42px] flex justify-center border-2 border-[#8A8A8A] text-[#8A8A8A] rounded-xl cursor-pointer"}
-                                    onClick={() => setActiveClotheSize(item.size)}
+                                    onClick={() => setActiveClotheSize(prev => prev === item.size ? "" : item.size)}
                                 >
                                     {item.size}
                                 </span>
@@ -104,7 +104,7 @@ const Filter = (props) => {
                                     className={activeBrand === item.name
                                         ? "text-black cursor-pointer font-bold"
                                         : "text-[#8A8A8A] cursor-pointer"}
-                                    onClick={() => setActiveBrand(item.name)}
+                                    onClick={() => setActiveBrand(prev => prev === item.name ? "" : item.name)}
                                 >
                                     {`${item.name}`}
                                 </span>

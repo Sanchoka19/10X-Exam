@@ -17,6 +17,8 @@ function App() {
   const [burgerActive, setBurgerActive] = useState(false);
   const [cartActive, setCartActive] = useState(false);
   const [cart, setCart] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const updateQuantity = (id, size, newQty) => {
     setCart((prev) =>
@@ -28,6 +30,8 @@ function App() {
     );
   };
 
+
+  const clearCart = () => setCart([]);
 
 
   const addToCart = (product, size, amount) => {
@@ -49,6 +53,7 @@ function App() {
       }
     });
   };
+
 
   const removeFromCart = (id, size) => {
     setCart((prev) => prev.filter(item => !(item.id == id && item.size === size)))
@@ -92,6 +97,9 @@ function App() {
             cart={cart}
             updateQuantity={updateQuantity}
             removeFromCart={removeFromCart}
+            setIsModalOpen={setIsModalOpen}
+            isModalOpen={isModalOpen}
+            clearCart={clearCart}
           />}
         />
       </Routes>

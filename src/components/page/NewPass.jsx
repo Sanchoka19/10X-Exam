@@ -45,7 +45,7 @@ const Newpass = () => {
 
         setErrors({});
         setForm({ password: '', confirmPassword: '' });
-        alert("თქვენი რეგისტრაცია წარმატებით დასრულდა");
+        alert("Your registration has been completed successfully.");
         navigate("/");
     }
 
@@ -65,11 +65,11 @@ const Newpass = () => {
                 <form onSubmit={handleOnSubmit} className="flex flex-col gap-4 w-full max-w-[80%] items-center">
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Enter Your New Password</span>
                     <div className="flex flex-col w-full">
-                        <Input type="input" inputVal="Password" name="password" value={form.password} onChange={handleChange} />
+                        <Input type="password" inputVal="Password" name="password" value={form.password} onChange={handleChange} />
                         {errors.password && <span className="text-red-400">{errors.password}</span>}
                     </div>
                     <div className="flex flex-col w-full">
-                        <Input type="input" inputVal="Confirm Password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} />
+                        <Input type="password" inputVal="Confirm Password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} />
                         {errors.confirmPassword && <span className="text-red-400">{errors.confirmPassword}</span>}
                     </div>
                     <div className="flex flex-col gap-[16px] w-full items-center">

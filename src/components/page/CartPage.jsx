@@ -4,7 +4,8 @@ import SecondaryHeader from "../layout/SecondaryHeader";
 import Subscribe from "../section/homePage/Subscribe";
 
 
-const Cart = ({ cart, updateQuantity, removeFromCart, burgerActive, cartActive, setBurgerActive, setCartActive }) => {
+const Cart = ({ cart, updateQuantity, removeFromCart, burgerActive, cartActive, setBurgerActive, setCartActive, setIsModalOpen, isModalOpen, clearCart}) => {
+
 
   return (
     <div>
@@ -18,6 +19,8 @@ const Cart = ({ cart, updateQuantity, removeFromCart, burgerActive, cartActive, 
         removeFromCart={removeFromCart}
         setShowBurger={setBurgerActive} showBurger={burgerActive}
         setShowCart={setCartActive} showCart={cartActive}
+        setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen}
+        clearCart={clearCart}
       />
 
       <Subscribe />

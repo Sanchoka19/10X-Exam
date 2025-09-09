@@ -1,26 +1,31 @@
+import { Plus, Minus } from "lucide-react";
 import Button from "./Button";
 import BurgerMenu from "../common/BurgerMenu";
 import MiniCart from "../section/MiniCart";
-import { Plus, Minus } from "lucide-react";
+import SuccesModal from "./SuccesModal";
 
 
-const MainCartCard = ({ cart = [], updateQuantity, removeFromCart, showBurger, showCart, setShowBurger, setShowCart }) => {
+
+const MainCartCard = ({ cart = [], updateQuantity, removeFromCart, showBurger, showCart, setShowBurger, setShowCart, isModalOpen, setIsModalOpen, clearCart }) => {
     const subTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
+    const handleCheckout = () => {
+        setIsModalOpen(true);
+
+        setTimeout(() => {
+            setIsModalOpen(false);
+            clearCart();
+        }, 2000);
+    };
+
+
     return (
-        <div className="flex items-center justify-center pb-[120px]">
-            {showBurger && <BurgerMenu
-                onClick={() => setShowBurger(false)}
-            />}
-            {showCart && <MiniCart
-                onClick={() => setShowCart(false)}
-                cart={cart}
-                updateQuantity={updateQuantity}
-                removeFromCart={removeFromCart}
-            />}
+        <div className="flex items-center justify-center pb-[120px] relative">
+            {showBurger && <BurgerMenu onClick={() => setShowBurger(false)} />}
+            {showCart && <MiniCart onClick={() => setShowCart(false)} cart={cart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />}
 
             <div className="flex items-center flex-col justify-center px-[10px] gap-24px max-w-[1280px] w-full">
-                <table className=" w-full border-spacing-y-[40px]">
+                <table className="w-full border-spacing-y-[40px]">
                     <thead>
                         <tr className="border-b">
                             <th className="text-left py-6 text-xl font-bold">Product</th>
@@ -30,61 +35,74 @@ const MainCartCard = ({ cart = [], updateQuantity, removeFromCart, showBurger, s
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            cart.map(item => (
-                                <tr className="align-top">
-                                    <td className="flex gap-[24px] py-4">
-                                        <img src={item.img} alt={item.alt} className="w-[168px] rounded-lg" />
-                                        <div className="flex flex-col justify-between pb-[20px] items-start">
-                                            <span className="flex max-w-[176px] w-full text-2xl font-bold">{item.title}</span>
-                                            <Button
-                                                value="Remove"
-                                                colorClass="bg-red-400 text-white"
-                                                onClick={() => removeFromCart(item.id, item.size)}
-                                            />
-                                        </div>
-                                    </td>
-                                    <td className="py-4">
-                                        <span className="text-2xl font-bold">${item.price}</span>
-                                    </td>
-                                    <td className="py-4">
-                                        <div className="p-[10px] border-1 rounded-xl border-[#EEEEEE] w-fit flex items-center gap-[24px]">
-                                            <button
-                                                className="border-none"
-                                                onClick={() => updateQuantity(item.id, item.size, item.quantity > 1 ? item.quantity - 1 : 1)}
-                                            >
-                                                <Minus />
-                                            </button>
-                                            <span className="text-xl font-bold">{item.quantity}</span>
-                                            <button
-                                                className="border-none"
-                                                onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)}
-                                            >
-                                                <Plus />
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td className="py-4 w-100px">
-                                        <span className="font-bold text-2xl">
-                                            ${(item.price * item.quantity).toFixed(2)}
-                                        </span>
-                                    </td>
-                                </tr>
-                            ))
-                        }
+                        {cart.map(item => (
+                            <tr className="align-top" key={item.id + item.size}>
+                                <td className="flex gap-[24px] py-4">
+                                    <img src={item.img} alt={item.alt} className="w-[168px] rounded-lg" />
+                                    <div className="flex flex-col justify-between pb-[20px] items-start">
+                                        <span className="flex max-w-[176px] w-full text-2xl font-bold">{item.title}</span>
+                                        <Button
+                                            value="Remove"
+                                            colorClass="bg-red-400 text-white"
+                                            onClick={() => removeFromCart(item.id, item.size)}
+                                        />
+                                    </div>
+                                </td>
+                                <td className="py-4">
+                                    <span className="text-2xl font-bold">${item.price}</span>
+                                </td>
+                                <td className="py-4">
+                                    <div className="p-[10px] border-1 rounded-xl border-[#EEEEEE] w-fit flex items-center gap-[24px]">
+                                        <button
+                                            className="border-none"
+                                            onClick={() => updateQuantity(item.id, item.size, item.quantity > 1 ? item.quantity - 1 : 1)}
+                                        >
+                                            <Minus />
+                                        </button>
+                                        <span className="text-xl font-bold">{item.quantity}</span>
+                                        <button
+                                            className="border-none"
+                                            onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)}
+                                        >
+                                            <Plus />
+                                        </button>
+                                    </div>
+                                </td>
+                                <td className="py-4 w-100px">
+                                    <span className="font-bold text-2xl">${(item.price * item.quantity).toFixed(2)}</span>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
-                </table >
+                </table>
+
                 <div className="flex flex-col gap-[24px] mt-6 self-end w-200px">
                     <div className="flex justify-between">
                         <span className="font-bold text-xl">{`Subtotal $${subTotal.toFixed(2)}`}</span>
                     </div>
                     <div className="flex flex-col gap-[12px]">
-                        <Button value="Checkout" colorClass="bg-black text-white w-full" />
+                        <Button
+                            value="Checkout"
+                            colorClass="bg-black text-white w-full"
+                            onClick={handleCheckout} // open modal
+                        />
                     </div>
                 </div>
             </div>
+
+            {/* Modal */}
+            {isModalOpen && (
+                <SuccesModal
+                    setIsModalOpen={setIsModalOpen}
+                    isModalOpen={isModalOpen}
+                    subTotal={subTotal}
+                    title="Checkout"
+                    subTitle="Your subTotal is: "
+                    alertMessage="Purchase confirmed!"
+                />
+            )}
         </div>
-    )
-}
+    );
+};
 
 export default MainCartCard;
