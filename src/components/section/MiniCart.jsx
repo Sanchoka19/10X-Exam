@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartCard from "../common/CartCard";
 import Button from "../common/Button";
 
-const MiniCart = ({ onClick, cart = [], updateQuantity }) => {
+const MiniCart = ({ onClick, cart = [], updateQuantity, removeFromCart }) => {
     const subTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
@@ -30,6 +30,7 @@ const MiniCart = ({ onClick, cart = [], updateQuantity }) => {
                             price={item.price}
                             quantity={item.quantity}
                             onQuantityChange={(newQty) => updateQuantity(item.id, item.size, newQty)}
+                            onclick={() => removeFromCart(item.id, item.size)}
                         />
                     ))}
                 </div>

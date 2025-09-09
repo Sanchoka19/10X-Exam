@@ -36,7 +36,9 @@ const ProductDetails = (props) => {
             {props.showCart && <MiniCart
                 onClick={() => props.setShowCart(false)}
                 cart={props.cart}
-                updateQuantity={props.updateQuantity} />}
+                updateQuantity={props.updateQuantity}
+                removeFromCart={props.removeFromCart}
+            />}
 
             <div className="flex gap-[24px] flex-wrap justify-center">
                 <div className="flex xl:flex-col gap-[16px] flex-wrap order-2 lg:order-1">
@@ -45,7 +47,7 @@ const ProductDetails = (props) => {
                             key={index}
                             src={product.img}
                             alt={`${product.title}-thumb-${index}`}
-                            className="w-[58px] h-[80px] cursor-pointer"
+                            className="w-[58px]  cursor-pointer"
                             onClick={() => setMainImage(product.img)}
                         />
                     ))}

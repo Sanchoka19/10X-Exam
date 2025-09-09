@@ -6,7 +6,7 @@ import Footer from "../layout/MainFooter";
 import ProductDetails from "../section/productPage/ProductDetails";
 
 
-const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, cart, updateQuantity }) => {
+const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, cart, updateQuantity, removeFromCart }) => {
 
     return (
         <div>
@@ -20,6 +20,7 @@ const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive,
                 addToCart={addToCart}
                 cart={cart}
                 updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
             />
             <Feature />
             <Carousel />

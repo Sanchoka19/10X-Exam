@@ -1,11 +1,24 @@
 import Button from "./Button";
+import BurgerMenu from "../common/BurgerMenu";
+import MiniCart from "../section/MiniCart";
 import { Plus, Minus } from "lucide-react";
 
-const MainCartCard = ({ cart = [], updateQuantity }) => {
+
+const MainCartCard = ({ cart = [], updateQuantity, removeFromCart, showBurger, showCart, setShowBurger, setShowCart }) => {
     const subTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
         <div className="flex items-center justify-center pb-[120px]">
+            {showBurger && <BurgerMenu
+                onClick={() => setShowBurger(false)}
+            />}
+            {showCart && <MiniCart
+                onClick={() => setShowCart(false)}
+                cart={cart}
+                updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
+            />}
+
             <div className="flex items-center flex-col justify-center px-[10px] gap-24px max-w-[1280px] w-full">
                 <table className=" w-full border-spacing-y-[40px]">
                     <thead>
@@ -27,6 +40,7 @@ const MainCartCard = ({ cart = [], updateQuantity }) => {
                                             <Button
                                                 value="Remove"
                                                 colorClass="bg-red-400 text-white"
+                                                onClick={() => removeFromCart(item.id, item.size)}
                                             />
                                         </div>
                                     </td>
@@ -62,8 +76,7 @@ const MainCartCard = ({ cart = [], updateQuantity }) => {
                 </table >
                 <div className="flex flex-col gap-[24px] mt-6 self-end w-200px">
                     <div className="flex justify-between">
-                        <span className="font-bold text-xl">Subtotal</span>
-                        <span className="font-bold text-xl">{`$ ${subTotal.toFixed(2)}`}</span>
+                        <span className="font-bold text-xl">{`Subtotal $${subTotal.toFixed(2)}`}</span>
                     </div>
                     <div className="flex flex-col gap-[12px]">
                         <Button value="Checkout" colorClass="bg-black text-white w-full" />

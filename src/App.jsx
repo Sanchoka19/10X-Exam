@@ -17,7 +17,6 @@ function App() {
   const [burgerActive, setBurgerActive] = useState(false);
   const [cartActive, setCartActive] = useState(false);
   const [cart, setCart] = useState([]);
-  const [amount, setAmount] = useState(1);
 
   const updateQuantity = (id, size, newQty) => {
     setCart((prev) =>
@@ -30,13 +29,14 @@ function App() {
   };
 
 
+
   const addToCart = (product, size, amount) => {
     setCart((prev) => {
       const exist = prev.find(
         (item) => item.id === product.id && item.size === size
       );
 
-      const numericAmount = Number(amount) || 1; // ✅ ensure it's a number
+      const numericAmount = Number(amount) || 1;
 
       if (exist) {
         return prev.map((item) =>
@@ -49,6 +49,10 @@ function App() {
       }
     });
   };
+
+  const removeFromCart = (id, size) => {
+    setCart((prev) => prev.filter(item => !(item.id == id && item.size === size)))
+  }
 
   return (
     <>
@@ -63,7 +67,9 @@ function App() {
           <ShopPage
             burgerActive={burgerActive} setBurgerActive={setBurgerActive}
             cartActive={cartActive} setCartActive={setCartActive}
-            amount={amount} setAmount={setAmount}
+            addToCart={addToCart} cart={cart}
+            updateQuantity={updateQuantity}
+            removeFromCart={removeFromCart}
           />}
         />
         <Route path="/product" element={<ShopPage />} />
@@ -75,13 +81,17 @@ function App() {
               cartActive={cartActive} setCartActive={setCartActive}
               addToCart={addToCart} cart={cart}
               updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
             />
           }
         />
         <Route path="/Cart" element={
           <CartPage
+            burgerActive={burgerActive} setBurgerActive={setBurgerActive}
+            cartActive={cartActive} setCartActive={setCartActive}
             cart={cart}
             updateQuantity={updateQuantity}
+            removeFromCart={removeFromCart}
           />}
         />
       </Routes>

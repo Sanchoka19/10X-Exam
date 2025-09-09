@@ -51,10 +51,14 @@ const Filter = (props) => {
         <div className="flex gap-[24px] justify-center p-[80px]">
             {props.showBurger && <BurgerMenu
                 onClick={() => props.setShowBurger(false)}
-                amount={props.amount}
-                setAmount={props.setAmount}
             />}
-            {props.showCart && <MiniCart onClick={() => props.setShowCart(false)} />}
+            
+            {props.showCart && <MiniCart
+                onClick={() => props.setShowCart(false)}
+                cart={props.cart}
+                updateQuantity={props.updateQuantity}
+                removeFromCart={props.removeFromCart}
+            />}
 
             <div className="lg:w-2/7 flex flex-col gap-[32px] hidden lg:flex">
 

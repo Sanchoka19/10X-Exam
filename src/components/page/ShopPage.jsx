@@ -4,7 +4,7 @@ import Feature from "../section/homePage/Features";
 import Subscribe from "../section/homePage/Subscribe";
 import Footer from "../layout/MainFooter";
 
-const ShopPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, amount, setAmount }) => {
+const ShopPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, cart, updateQuantity, removeFromCart }) => {
     return (
         <div>
             <SecondaryHeader
@@ -14,7 +14,10 @@ const ShopPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, am
             <Filter
                 setShowBurger={setBurgerActive} showBurger={burgerActive}
                 setShowCart={setCartActive} showCart={cartActive}
-                amount={amount} setAmount={setAmount}
+                addToCart={addToCart}
+                cart={cart}
+                updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
             />
             <Feature />
             <Subscribe />

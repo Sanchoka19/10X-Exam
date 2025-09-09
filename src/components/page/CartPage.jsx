@@ -4,14 +4,20 @@ import SecondaryHeader from "../layout/SecondaryHeader";
 import Subscribe from "../section/homePage/Subscribe";
 
 
-const Cart = ({cart, updateQuantity}) => {
+const Cart = ({ cart, updateQuantity, removeFromCart, burgerActive, cartActive, setBurgerActive, setCartActive }) => {
 
   return (
     <div>
-      <SecondaryHeader />
+      <SecondaryHeader
+        onClickMenu={() => setBurgerActive(!burgerActive)}
+        onClickHandbag={() => setCartActive(!cartActive)}
+      />
       <MainCartCard
         cart={cart}
         updateQuantity={updateQuantity}
+        removeFromCart={removeFromCart}
+        setShowBurger={setBurgerActive} showBurger={burgerActive}
+        setShowCart={setCartActive} showCart={cartActive}
       />
 
       <Subscribe />
