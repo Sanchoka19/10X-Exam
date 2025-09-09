@@ -3,7 +3,7 @@ import { Plus, Minus } from "lucide-react";
 const CartCard = ({ img, title, price, quantity, onQuantityChange }) => {
     return (
         <div className="flex w-fit ">
-            <img src={img} alt="img" className="md:w-[170px] md:h-[190px] w-[140px] h-[160px]" />
+            <img src={img} alt="img" className="md:w-[170px]  w-[140px]" />
             <div className="flex flex-col gap-[12px] py-[10px] px-[20px] justify-between">
                 <div className="flex flex-col gap-[8px]">
                     <span className="text-2xl font-bold">{title}</span>

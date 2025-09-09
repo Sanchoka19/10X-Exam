@@ -6,7 +6,7 @@ import Footer from "../layout/MainFooter";
 import ProductDetails from "../section/productPage/ProductDetails";
 
 
-const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, products, cart, updateQuantity }) => {
+const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive, addToCart, cart, updateQuantity }) => {
 
     return (
         <div>
@@ -18,7 +18,6 @@ const ProductPage = ({ burgerActive, setBurgerActive, cartActive, setCartActive,
                 setShowBurger={setBurgerActive} showBurger={burgerActive}
                 setShowCart={setCartActive} showCart={cartActive}
                 addToCart={addToCart}
-                products={products}
                 cart={cart}
                 updateQuantity={updateQuantity}
             />

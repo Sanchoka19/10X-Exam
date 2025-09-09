@@ -1,35 +1,35 @@
 {
   "1": [
-    { "id": 1, "img": "/assets/images/filter-girl-3.png", "title": "Classic Red Hat", "brand": "ZARA", "status": "Sold Out", "price": 145, "size": "M" },
-    { "id": 2, "img": "/assets/images/filter-girl-1.png", "title": "Linen Summer Top", "brand": "PRADA", "status": "", "price": 480, "size": ["S", "M"] },
-    { "id": 3, "img": "/assets/images/filter-girl-4.png", "title": "Oversized Black T-shirt", "brand": "DENIM", "status": "", "price": 95, "size": "XL" },
-    { "id": 4, "img": "/assets/images/filter-girl-2.png", "title": "Sporty Cap", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 310, "size": ["L", "XL"] },
-    { "id": 5, "img": "/assets/images/filter-girl-3.png", "title": "Casual Hoodie", "brand": "H&M", "status": "", "price": 570, "size": "S" },
-    { "id": 6, "img": "/assets/images/filter-girl-4.png", "title": "Denim Jacket", "brand": "ZARA", "status": "", "price": 220, "size": "L" },
-    { "id": 7, "img": "/assets/images/filter-girl-1.png", "title": "Slim Fit Shirt", "brand": "PRADA", "status": "", "price": 405, "size": ["M", "XL"] },
-    { "id": 8, "img": "/assets/images/filter-girl-2.png", "title": "Cotton Shorts", "brand": "DENIM", "status": "Sold Out", "price": 190, "size": "S" },
-    { "id": 9, "img": "/assets/images/filter-girl-3.png", "title": "Leather Jacket", "brand": "LOUIS VUITTONE", "status": "", "price": 330, "size": ["L", "XL"] }
+    { "id": 1, "img": "/assets/images/HerroImg1.jpg", "title": "Classic Red Hat", "brand": "ZARA", "status": "Sold Out", "price": 145, "size": "M" },
+    { "id": 2, "img": "/assets/images/pexels-6.jpg", "title": "Linen Summer Top", "brand": "PRADA", "status": "", "price": 480, "size": ["S", "M"] },
+    { "id": 3, "img": "/assets/images/pexels-1.jpg", "title": "Oversized Black T-shirt", "brand": "DENIM", "status": "", "price": 95, "size": "XL" },
+    { "id": 4, "img": "/assets/images/pexels-wendelmoretti-1972115.jpg", "title": "Sporty Cap", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 310, "size": ["L", "XL"] },
+    { "id": 5, "img": "/assets/images/pexels-2.jpg", "title": "Casual Hoodie", "brand": "H&M", "status": "", "price": 570, "size": "S" },
+    { "id": 6, "img": "/assets/images/pexels-4.jpg", "title": "Denim Jacket", "brand": "ZARA", "status": "", "price": 220, "size": "L" },
+    { "id": 7, "img": "/assets/images/pexels-athena-2043590.jpg", "title": "Slim Fit Shirt", "brand": "PRADA", "status": "", "price": 405, "size": ["M", "XL"] },
+    { "id": 8, "img": "/assets/images/pexels-3.jpg", "title": "Cotton Shorts", "brand": "DENIM", "status": "Sold Out", "price": 190, "size": "S" },
+    { "id": 9, "img": "/assets/images/pexels-5.jpg", "title": "Leather Jacket", "brand": "LOUIS VUITTONE", "status": "", "price": 330, "size": ["L", "XL"] }
   ],
   "2": [
-    { "id": 1, "img": "/assets/images/filter-girl-4.png", "title": "Vintage Hat", "brand": "H&M", "status": "Sold Out", "price": 720, "size": "XL" },
-    { "id": 2, "img": "/assets/images/filter-girl-1.png", "title": "Casual Blouse", "brand": "ZARA", "status": "", "price": 260, "size": ["M", "L"] },
-    { "id": 3, "img": "/assets/images/filter-girl-2.png", "title": "Graphic Tee", "brand": "PRADA", "status": "", "price": 135, "size": "S" },
-    { "id": 4, "img": "/assets/images/filter-girl-3.png", "title": "Bomber Jacket", "brand": "DENIM", "status": "", "price": 560, "size": ["L", "XL"] },
-    { "id": 5, "img": "/assets/images/filter-girl-4.png", "title": "Basic Hoodie", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 295, "size": "M" },
-    { "id": 6, "img": "/assets/images/filter-girl-2.png", "title": "Cargo Pants", "brand": "H&M", "status": "", "price": 415, "size": ["S", "M"] },
-    { "id": 7, "img": "/assets/images/filter-girl-1.png", "title": "Long Sleeve Shirt", "brand": "ZARA", "status": "", "price": 175, "size": "L" },
-    { "id": 8, "img": "/assets/images/filter-girl-4.png", "title": "Windbreaker", "brand": "PRADA", "status": "", "price": 505, "size": ["XL", "M"] },
-    { "id": 9, "img": "/assets/images/filter-girl-3.png", "title": "Jogger Pants", "brand": "DENIM", "status": "", "price": 260, "size": "S" }
+    { "id": 1, "img": "/assets/images/pexels-1.jpg", "title": "Vintage Hat", "brand": "H&M", "status": "Sold Out", "price": 720, "size": "XL" },
+    { "id": 2, "img": "/assets/images/pexels-athena-2043590.jpg", "title": "Casual Blouse", "brand": "ZARA", "status": "", "price": 260, "size": ["M", "L"] },
+    { "id": 3, "img": "/assets/images/pexels-3.jpg", "title": "Graphic Tee", "brand": "PRADA", "status": "", "price": 135, "size": "S" },
+    { "id": 4, "img": "/assets/images/pexels-2.jpg", "title": "Bomber Jacket", "brand": "DENIM", "status": "", "price": 560, "size": ["L", "XL"] },
+    { "id": 5, "img": "/assets/images/pexels-1.jpg", "title": "Basic Hoodie", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 295, "size": "M" },
+    { "id": 6, "img": "/assets/images/pexels-3.jpg", "title": "Cargo Pants", "brand": "H&M", "status": "", "price": 415, "size": ["S", "M"] },
+    { "id": 7, "img": "/assets/images/pexels-6.jpg", "title": "Long Sleeve Shirt", "brand": "ZARA", "status": "", "price": 175, "size": "L" },
+    { "id": 8, "img": "/assets/images/pexels-1.jpg", "title": "Windbreaker", "brand": "PRADA", "status": "", "price": 505, "size": ["XL", "M"] },
+    { "id": 9, "img": "/assets/images/pexels-2.jpg", "title": "Jogger Pants", "brand": "DENIM", "status": "", "price": 260, "size": "S" }
   ],
   "3": [
-    { "id": 1, "img": "/assets/images/filter-girl-2.png", "title": "Streetwear Cap", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 430, "size": "M" },
-    { "id": 2, "img": "/assets/images/filter-girl-4.png", "title": "Sleeveless Top", "brand": "H&M", "status": "", "price": 160, "size": ["S", "XL"] },
-    { "id": 3, "img": "/assets/images/filter-girl-1.png", "title": "Basic White Tee", "brand": "ZARA", "status": "", "price": 390, "size": "L" },
-    { "id": 4, "img": "/assets/images/filter-girl-2.png", "title": "Denim Shorts", "brand": "PRADA", "status": "Sold Out", "price": 250, "size": ["M", "L"] },
-    { "id": 5, "img": "/assets/images/filter-girl-3.png", "title": "Wool Sweater", "brand": "DENIM", "status": "", "price": 600, "size": "XL" },
-    { "id": 6, "img": "/assets/images/filter-girl-1.png", "title": "Striped Shirt", "brand": "LOUIS VUITTONE", "status": "", "price": 310, "size": ["S", "M"] },
-    { "id": 7, "img": "/assets/images/filter-girl-4.png", "title": "Fleece Jacket", "brand": "H&M", "status": "", "price": 490, "size": "L" },
-    { "id": 8, "img": "/assets/images/filter-girl-3.png", "title": "Training Shorts", "brand": "ZARA", "status": "Sold Out", "price": 205, "size": ["XL", "S"] },
-    { "id": 9, "img": "/assets/images/filter-girl-2.png", "title": "Formal Shirt", "brand": "PRADA", "status": "", "price": 355, "size": "M" }
+    { "id": 1, "img": "/assets/images/pexels-2.jpg", "title": "Streetwear Cap", "brand": "LOUIS VUITTONE", "status": "Sold Out", "price": 430, "size": "M" },
+    { "id": 2, "img": "/assets/images/pexels-1.jpg", "title": "Sleeveless Top", "brand": "H&M", "status": "", "price": 160, "size": ["S", "XL"] },
+    { "id": 3, "img": "/assets/images/pexels-4.jpg", "title": "Basic White Tee", "brand": "ZARA", "status": "", "price": 390, "size": "L" },
+    { "id": 4, "img": "/assets/images/pexels-3.jpg", "title": "Denim Shorts", "brand": "PRADA", "status": "Sold Out", "price": 250, "size": ["M", "L"] },
+    { "id": 5, "img": "/assets/images/pexels-5.jpg", "title": "Wool Sweater", "brand": "DENIM", "status": "", "price": 600, "size": "XL" },
+    { "id": 6, "img": "/assets/images/pexels-8.jpg", "title": "Striped Shirt", "brand": "LOUIS VUITTONE", "status": "", "price": 310, "size": ["S", "M"] },
+    { "id": 7, "img": "/assets/images/pexels-1.jpg", "title": "Fleece Jacket", "brand": "H&M", "status": "", "price": 490, "size": "L" },
+    { "id": 8, "img": "/assets/images/pexels-7.jpg", "title": "Training Shorts", "brand": "ZARA", "status": "Sold Out", "price": 205, "size": ["XL", "S"] },
+    { "id": 9, "img": "/assets/images/pexels-6.jpg", "title": "Formal Shirt", "brand": "PRADA", "status": "", "price": 355, "size": "M" }
   ]
 }

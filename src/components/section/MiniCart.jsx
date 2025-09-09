@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
-import CartCard from "../common/CartCard";
+import { Link } from "react-router-dom";
 
+import CartCard from "../common/CartCard";
 import Button from "../common/Button";
 
 const MiniCart = ({ onClick, cart = [], updateQuantity }) => {
@@ -40,7 +41,9 @@ const MiniCart = ({ onClick, cart = [], updateQuantity }) => {
                     </div>
                     <div className="flex flex-col gap-[12px]">
                         <Button value="Checkout" colorClass="bg-black text-white w-full" />
-                        <u className="text-base text-center cursor-pointer">View Cart</u>
+                        <Link to={"/Cart"} className="flex justify-center">
+                            <u className="text-base text-center cursor-pointer">View Cart</u>
+                        </Link>
                     </div>
                 </div>
             </div>

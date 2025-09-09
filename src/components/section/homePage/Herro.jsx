@@ -2,7 +2,7 @@ import Button from "../../common/Button";
 
 import heroImg1 from "/assets/images/HerroImg1.jpg"
 import heroImg2 from "/assets/images/HerroImg2.jpg"
-import heroImg3 from "/assets/images/herroImg3.jpg"
+import heroImg3 from "/assets/images/HerroImg3.jpg"
 import heroImg4 from "/assets/images/HerroImg4.jpg"
 import { Link } from "react-router-dom";
 

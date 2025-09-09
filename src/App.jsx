@@ -10,8 +10,7 @@ import ForgetPassword from "./components/page/ForgerPasswordPage";
 import Confirmation from "./components/page/Confirmation";
 import Newpass from "./components/page/Newpass";
 import ProductPage from './components/page/ProductPage';
-
-import products from "./data/products.json"
+import CartPage from "./components/page/CartPage";
 
 
 function App() {
@@ -74,10 +73,16 @@ function App() {
             <ProductPage
               burgerActive={burgerActive} setBurgerActive={setBurgerActive}
               cartActive={cartActive} setCartActive={setCartActive}
-              addToCart={addToCart} cart={cart} products={products}
+              addToCart={addToCart} cart={cart}
               updateQuantity={updateQuantity}
             />
           }
+        />
+        <Route path="/Cart" element={
+          <CartPage
+            cart={cart}
+            updateQuantity={updateQuantity}
+          />}
         />
       </Routes>
     </>
