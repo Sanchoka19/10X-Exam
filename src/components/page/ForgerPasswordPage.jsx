@@ -4,7 +4,7 @@
 import Input from "../common/Input";
 import Button from "../common/Button";
 // { Images }
-import MainImg from "/assets/images/pexels-olly-972804.jpg";
+import MainImg from "/assets/images/pexels-8.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -16,7 +16,7 @@ const ForgetPassword = () => {
 
     return (
         <div className="flex w-screen h-screen ">
-            <div className="w-1/2 h-full">
+            <div className="hidden lg:flex w-1/2 h-full">
                 <img
                     src={MainImg}
                     alt="Main Img"
@@ -24,7 +24,7 @@ const ForgetPassword = () => {
                 />
             </div>
 
-            <div className="w-1/2 h-full flex flex-col justify-center items-center p-3 gap-[120px]">
+            <div className="lg:w-1/2 w-screen py-[40px] min-h-screen flex flex-col justify-center items-center p-3 gap-[40px]">
                 <h1 className="font-black">VELOURA</h1>
                 <form onSubmit={handleOnSubmit} className="flex flex-col gap-4 w-full max-w-[80%] items-center">
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Forget Password</span>
@@ -39,7 +39,7 @@ const ForgetPassword = () => {
                                 type="submit"
                             />
                         </Link>
-                        <span className="w-[90%] text-center cursor-pointer">Already have an account? <button type="button" className="text-[#5B86E5]">Login</button></span>
+                        <span className="w-[90%] text-center cursor-pointer">Already have an account? <button type="button" className="text-[#5B86E5]"><Link to={"/Newpass"} className="flex w-full justify-center">Login</Link></button></span>
                     </div>
                 </form>
             </div>

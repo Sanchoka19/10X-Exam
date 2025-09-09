@@ -3,7 +3,7 @@ import Input from "../common/Input";
 import Button from "../common/Button";
 
 // { Images }
-import MainImg from "/assets/images/pexels-olly-972804.jpg";
+import MainImg from "/assets/images/pexels-8.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -50,16 +50,17 @@ const Newpass = () => {
     }
 
     return (
-        <div className="flex w-screen h-screen ">
-            <div className="w-1/2 h-full">
+        <div className="flex w-screen min-h-screen lg:h-screen">
+            <div className="hidden lg:flex w-1/2 h-full">
                 <img
                     src={MainImg}
                     alt="Main Img"
                     className="w-full h-full object-cover"
+                    // className="h-full 3xl:w-full "
                 />
             </div>
 
-            <div className="w-1/2 h-full flex flex-col justify-center items-center p-3 gap-[120px]">
+            <div className="lg:w-1/2 w-screen py-[40px] min-h-screen flex flex-col justify-center items-center p-3 gap-[40px]">
                 <h1 className="font-black">VELOURA</h1>
                 <form onSubmit={handleOnSubmit} className="flex flex-col gap-4 w-full max-w-[80%] items-center">
                     <span className="text-[24px] font-bold text-left w-full mb-[32px]">Enter Your New Password</span>

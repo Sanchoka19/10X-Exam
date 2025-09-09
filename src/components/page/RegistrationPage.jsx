@@ -7,15 +7,16 @@ import Button from "../common/Button";
 import SocialNetButton from "../common/SocialNetButton";
 
 // { Images }
-import MainImg from "/assets/images/pexels-olly-919453.jpg";
+import MainImg from "/assets/images/pexels-8.jpg";
 import googleIco from "/assets/icons/GoogleIco.svg";
 import iphoneIco from "/assets/icons/ApleIco.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const RegistrationPage = () => {
     const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phoneNum: '', password: '', confirmPassword: '' });
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();   // ✅ hook for navigation
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -68,34 +69,36 @@ const RegistrationPage = () => {
         setErrors({});
         setForm({ firstName: '', lastName: '', email: '', phoneNum: '', password: '', confirmPassword: '' });
         alert("თქვენი რეგისტრაცია წარმატებით დასრულდა");
+        navigate("/")
     }
 
     return (
-        <div className="flex w-screen h-screen lg:">
+        <div className="flex w-screen min-h-screen lg:h-screen">
             <div className="hidden lg:flex w-1/2 h-full">
                 <img
                     src={MainImg}
                     alt="Main Img"
                     className="w-full h-full object-cover"
+                // className="h-full 3xl:w-full "
                 />
             </div>
 
-            <div className="lg:w-1/2 w-screen py-[40px] h-full flex flex-col justify-center items-center p-3 gap-[40px]">
+            <div className="lg:w-1/2 w-screen py-[40px] min-h-screen flex flex-col justify-center items-center p-3 gap-[40px]">
                 <h1 className="font-black">VELOURA</h1>
                 <div className="w-full flex flex-col gap-[16px] max-w-[80%] items-center">
                     <span className="text-32px font-bold">Create Account</span>
-                    <div className="w-full flex gap-[12px] justify-center">
+                    <div className="w-full md:flex gap-[12px] justify-center">
                         <Link to={"/"}><SocialNetButton src={googleIco} value="Sign up with Google" /></Link>
                         <Link to={"/"}><SocialNetButton src={iphoneIco} value="Sign up with Apple" /></Link>
                     </div>
                 </div>
                 <div className="flex gap-[12px] w-full items-center justify-center">
-                    <span className="h-[5px]  bg-[#000] w-[5%]"></span>
-                    <span className="text-[24px] font-bold">OR</span>
-                    <span className="h-[5px] bg-[#000] w-[5%]"></span>
+                    <span className="h-[2px]  bg-[#333333] w-[25%]"></span>
+                    <span className="text-[24px] font-medium">OR</span>
+                    <span className="h-[2px] bg-[#333333] w-[25%]"></span>
                 </div>
-                <form onSubmit={handleOnSubmit} className="flex flex-col gap-[32px] w-full max-w-[80%] items-center">
-                    <div className="flex gap-[12px] w-[100%]">
+                <form onSubmit={handleOnSubmit} className="flex flex-col md:gap-[32px] gap-[12px] w-full max-w-[80%] items-center">
+                    <div className="md:flex gap-[12px] w-[100%]">
                         <div className="flex flex-col gap-[4px] w-full">
                             <Input type="input" inputVal="First Name" name="firstName" value={form.firstName} onChange={handleChange} />
                         </div>
@@ -103,7 +106,7 @@ const RegistrationPage = () => {
                             <Input type="input" inputVal="Last Name" name="lastName" value={form.lastName} onChange={handleChange} />
                         </div>
                     </div>
-                    <div className="flex gap-[12px] w-[100%]">
+                    <div className="md:flex gap-[12px] w-[100%] ">
                         <div className="flex flex-col w-full">
                             <Input type="input" inputVal="Email Addres" name="email" value={form.email} onChange={handleChange} />
                             {errors.email && <span className="text-red-400">{errors.email}</span>}
@@ -113,13 +116,13 @@ const RegistrationPage = () => {
                             {errors.phoneNum && <span className="text-red-400">{errors.phoneNum}</span>}
                         </div>
                     </div>
-                    <div className="flex gap-[12px] w-[100%]">
+                    <div className="md:flex gap-[12px] w-[100%]">
                         <div className="flex flex-col w-full">
-                            <Input type="input" inputVal="Password" name="password" value={form.password} onChange={handleChange} />
+                            <Input type="password" inputVal="Password" name="password" value={form.password} onChange={handleChange} />
                             {errors.password && <span className="text-red-400">{errors.password}</span>}
                         </div>
                         <div className="flex flex-col w-full">
-                            <Input type="input" inputVal="Confirm Password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} />
+                            <Input type="password" inputVal="Confirm Password" name="confirmPassword" value={form.confirmPassword} onChange={handleChange} />
                             {errors.confirmPassword && <span className="text-red-400">{errors.confirmPassword}</span>}
                         </div>
                     </div>
@@ -129,7 +132,7 @@ const RegistrationPage = () => {
                             colorClass="bg-black text-white hover:bg-gray-800"
                             sizeClass="w-[90%] pt-[20px] pb-[20px]"
                             fontSizeClass="text-[16px]"
-                            type="submit"   // ✅ this submits the form
+                            type="submit" 
                         />
                         <span className="w-[90%] text-center cursor-pointer">
                             Already have an account?{" "}

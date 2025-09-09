@@ -46,7 +46,7 @@ src/
 
 ⚡ Getting Started
 1. Clone the repository
-    git clone https://github.com/your-username/clothing-ecommerce.git
+    git clone https://github.com/Sanchoka19/10X-Exam
     cd clothing-ecommerce
 
 2. Install dependencies
@@ -69,4 +69,4 @@ Now open 👉 http://localhost:5173/
 
 5.Adjust quantities or remove products directly from the cart.
 
-6.Register with a valid email & password to save your account.
+6.Register with a valid email & password.
